@@ -1,15 +1,21 @@
 PODS:
   - Mapbox-iOS-SDK (3.7.5)
   - MapboxGeocoder.swift (0.8.0)
+  - RxCocoa (4.1.2):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.2)
 
 DEPENDENCIES:
   - Mapbox-iOS-SDK (~> 3.7)
   - MapboxGeocoder.swift (~> 0.8)
+  - RxCocoa (~> 4.1)
 
 SPEC CHECKSUMS:
   Mapbox-iOS-SDK: 107e331a7ae02e6be902c1557d3454c54e18ce5b
   MapboxGeocoder.swift: 16e8488bbb81a5036b9a11d4d7714200337db86b
+  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
 
-PODFILE CHECKSUM: 8b28a795275277a2633e85a4883eba9d21d4d59a
+PODFILE CHECKSUM: 8aaedf8a792fb260b77c389882e61c3ce7d6ad85
 
 COCOAPODS: 1.4.0

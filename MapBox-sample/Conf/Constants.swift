@@ -19,4 +19,8 @@ struct Constants {
         private init(){}
         static let searchAddress = "searchAddress"
     }
+    struct CellIdentifier {
+        private init(){}
+        static let searchAddressCell = "searchAddressCell"
+    }
 }

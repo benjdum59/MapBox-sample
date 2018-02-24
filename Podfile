@@ -8,7 +8,8 @@ target 'MapBox-sample' do
   # Pods for MapBox-sample
   pod 'Mapbox-iOS-SDK', '~> 3.7'
   pod 'MapboxGeocoder.swift', '~> 0.8'  
-  
+  pod 'RxCocoa', '~> 4.1'
+ 
   target 'MapBox-sampleTests' do
     inherit! :search_paths
     # Pods for testing
