@@ -14,6 +14,9 @@
 		092E85932041749B00E29F11 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092E85922041749B00E29F11 /* Coordinate.swift */; };
 		092E85942041749B00E29F11 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092E85922041749B00E29F11 /* Coordinate.swift */; };
 		092E85952041749B00E29F11 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092E85922041749B00E29F11 /* Coordinate.swift */; };
+		09AA25DB204192AB00565CED /* SearchAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA25DA204192AB00565CED /* SearchAddressViewController.swift */; };
+		09AA25DC204192AB00565CED /* SearchAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA25DA204192AB00565CED /* SearchAddressViewController.swift */; };
+		09AA25DD204192AB00565CED /* SearchAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA25DA204192AB00565CED /* SearchAddressViewController.swift */; };
 		09DF39B5204169A10058B30B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DF39B4204169A10058B30B /* AppDelegate.swift */; };
 		09DF39B7204169A10058B30B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DF39B6204169A10058B30B /* MapViewController.swift */; };
 		09DF39BA204169A10058B30B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09DF39B8204169A10058B30B /* Main.storyboard */; };
@@ -48,6 +51,7 @@
 		092E858B20416D8500E29F11 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		092E858F2041717E00E29F11 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		092E85922041749B00E29F11 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		09AA25DA204192AB00565CED /* SearchAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressViewController.swift; sourceTree = "<group>"; };
 		09DF39B1204169A10058B30B /* MapBox-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MapBox-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09DF39B4204169A10058B30B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09DF39B6204169A10058B30B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 			children = (
 				09DF39B6204169A10058B30B /* MapViewController.swift */,
 				09DF39B8204169A10058B30B /* Main.storyboard */,
+				09AA25DA204192AB00565CED /* SearchAddressViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -499,6 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09DF39B7204169A10058B30B /* MapViewController.swift in Sources */,
+				09AA25DB204192AB00565CED /* SearchAddressViewController.swift in Sources */,
 				09DF39B5204169A10058B30B /* AppDelegate.swift in Sources */,
 				092E858C20416D8500E29F11 /* Constants.swift in Sources */,
 				092E85932041749B00E29F11 /* Coordinate.swift in Sources */,
@@ -510,6 +516,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09DF39CA204169A10058B30B /* MapBox_sampleTests.swift in Sources */,
+				09AA25DC204192AB00565CED /* SearchAddressViewController.swift in Sources */,
 				092E858D20416D8500E29F11 /* Constants.swift in Sources */,
 				092E85942041749B00E29F11 /* Coordinate.swift in Sources */,
 			);
@@ -520,6 +527,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09DF39D5204169A10058B30B /* MapBox_sampleUITests.swift in Sources */,
+				09AA25DD204192AB00565CED /* SearchAddressViewController.swift in Sources */,
 				092E858E20416D8500E29F11 /* Constants.swift in Sources */,
 				092E85952041749B00E29F11 /* Coordinate.swift in Sources */,
 			);

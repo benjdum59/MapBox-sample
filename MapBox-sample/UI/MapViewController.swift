@@ -51,8 +51,6 @@ class MapViewController: UIViewController {
         pin.coordinate = coordinate
         mapView.addAnnotation(pin)
     }
-
-
 }
 
 extension MapViewController: CLLocationManagerDelegate {
@@ -61,6 +59,12 @@ extension MapViewController: CLLocationManagerDelegate {
         currentCoordinate = location.coordinate
         locationManager.stopUpdatingLocation()
         showUserLocation()
+    }
+}
+
+extension MapViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        performSegue(withIdentifier: Constants.Segue.searchAddress, sender: self)
     }
 }
 
