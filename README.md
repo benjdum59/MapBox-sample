@@ -36,3 +36,9 @@ Open xcworkspace file to run the application. If you want to add new pods, you c
 ## Notes
 ### Step1
  - Using MapView in storyboard make it crash, so the view is added programmatically
+
+### Step2
+ - Use of MapBoxGeocoder library for address autocompletion
+ - Use of a dedicated ViewController in charge of searching addresses
+ - Creation of Address model
+ - Creation of an Address Service
