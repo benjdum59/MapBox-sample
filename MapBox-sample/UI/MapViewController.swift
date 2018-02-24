@@ -49,9 +49,6 @@ class MapViewController: UIViewController {
         mapView.setCenter(coordinate, zoomLevel: Constants.MapBox.defaultZoom, animated: true)
         let pin = MGLPointAnnotation()
         pin.coordinate = coordinate
-        pin.title = "Current position"
-        
-        // Add marker `hello` to the map.
         mapView.addAnnotation(pin)
     }
 
