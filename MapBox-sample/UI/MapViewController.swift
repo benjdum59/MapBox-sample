@@ -8,16 +8,20 @@
 
 import UIKit
 import Mapbox
+import CoreLocation
 
 class MapViewController: UIViewController {
     
     @IBOutlet private weak var mapViewContainer: UIView!
     
     fileprivate var mapView: MGLMapView!
+    fileprivate let locationManager = CLLocationManager()
+    fileprivate var currentCoordinate: CLLocationCoordinate2D?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureMapView()
+        configureLocation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,7 +34,36 @@ class MapViewController: UIViewController {
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapViewContainer.addSubview(mapView)
     }
+    
+    private func configureLocation(){
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+    
+    fileprivate func showUserLocation(){
+        guard let coordinate = currentCoordinate else {
+            return
+        }
+        mapView.setCenter(coordinate, zoomLevel: Constants.MapBox.defaultZoom, animated: true)
+        let pin = MGLPointAnnotation()
+        pin.coordinate = coordinate
+        pin.title = "Current position"
+        
+        // Add marker `hello` to the map.
+        mapView.addAnnotation(pin)
+    }
 
 
+}
+
+extension MapViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations.last! as CLLocation
+        currentCoordinate = location.coordinate
+        locationManager.stopUpdatingLocation()
+        showUserLocation()
+    }
 }
 
