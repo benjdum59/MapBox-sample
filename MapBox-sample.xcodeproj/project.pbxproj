@@ -24,6 +24,7 @@
 		09DF39BF204169A10058B30B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09DF39BD204169A10058B30B /* LaunchScreen.storyboard */; };
 		09DF39CA204169A10058B30B /* MapBox_sampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DF39C9204169A10058B30B /* MapBox_sampleTests.swift */; };
 		09DF39D5204169A10058B30B /* MapBox_sampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DF39D4204169A10058B30B /* MapBox_sampleUITests.swift */; };
+		09F28DC220419E4E0040DBF6 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F28DC120419E4E0040DBF6 /* Address.swift */; };
 		0A66BA949E603653C10272E2 /* Pods_MapBox_sampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94519488A0C666D17928AABD /* Pods_MapBox_sampleTests.framework */; };
 		0F278E0A0701CEC6ED2BFE02 /* Pods_MapBox_sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DA19FDD673D61962A6980C /* Pods_MapBox_sample.framework */; };
 		2342AA67338E311041073C3C /* Pods_MapBox_sampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 116D7DBD24104C604659754B /* Pods_MapBox_sampleUITests.framework */; };
@@ -65,6 +66,7 @@
 		09DF39D0204169A10058B30B /* MapBox-sampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MapBox-sampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09DF39D4204169A10058B30B /* MapBox_sampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBox_sampleUITests.swift; sourceTree = "<group>"; };
 		09DF39D6204169A20058B30B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09F28DC120419E4E0040DBF6 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		116D7DBD24104C604659754B /* Pods_MapBox_sampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapBox_sampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		165B1491379AC00B7B1DEF3E /* Pods-MapBox-sampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapBox-sampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapBox-sampleTests/Pods-MapBox-sampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1696A57DEDB39284FD278CBC /* Pods-MapBox-sampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapBox-sampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapBox-sampleUITests/Pods-MapBox-sampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				092E85922041749B00E29F11 /* Coordinate.swift */,
+				09F28DC120419E4E0040DBF6 /* Address.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -371,11 +374,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MapBox-sample/Pods-MapBox-sample-frameworks.sh",
 				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
 				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM",
+				"${BUILT_PRODUCTS_DIR}/MapboxGeocoder.swift/MapboxGeocoder.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
 				"${DWARF_DSYM_FOLDER_PATH}/Mapbox.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxGeocoder.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -503,6 +508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09F28DC220419E4E0040DBF6 /* Address.swift in Sources */,
 				09DF39B7204169A10058B30B /* MapViewController.swift in Sources */,
 				09AA25DB204192AB00565CED /* SearchAddressViewController.swift in Sources */,
 				09DF39B5204169A10058B30B /* AppDelegate.swift in Sources */,

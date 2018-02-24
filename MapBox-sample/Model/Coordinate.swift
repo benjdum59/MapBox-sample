@@ -7,15 +7,20 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct Coordinate{
     let latitude: Double
     let longitude: Double
     
-    
     init(latitude: Double, longitude: Double) {
         self.latitude = latitude
         self.longitude = longitude
+    }
+    
+    init(location: CLLocation) {
+        self.latitude = location.coordinate.latitude
+        self.longitude = location.coordinate.longitude
     }
 }
 

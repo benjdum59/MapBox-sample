@@ -56,7 +56,7 @@
                     </view>
                     <connections>
                         <outlet property="mapViewContainer" destination="QLU-xt-2a5" id="AvK-Fq-uVU"/>
-                        <segue destination="NE8-Eg-5iy" kind="presentation" identifier="searchAddress" modalTransitionStyle="crossDissolve" id="W8j-ux-FuO"/>
+                        <segue destination="NE8-Eg-5iy" kind="presentation" identifier="searchAddress" animates="NO" modalTransitionStyle="crossDissolve" id="W8j-ux-FuO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -123,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k2J-AJ-gWq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1394" y="62"/>
+            <point key="canvasLocation" x="1521" y="62"/>
         </scene>
     </scenes>
 </document>
