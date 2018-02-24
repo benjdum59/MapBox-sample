@@ -15,4 +15,12 @@ struct Constants {
         static let url = URL(string: "mapbox://styles/mapbox/streets-v10")
         static let defaultZoom: Double = 9
     }
+    struct Segue {
+        private init(){}
+        static let searchAddress = "searchAddress"
+    }
+    struct CellIdentifier {
+        private init(){}
+        static let searchAddressCell = "searchAddressCell"
+    }
 }
