@@ -16,6 +16,8 @@ class SearchAddressViewController: UIViewController {
     @IBOutlet weak var addressTableView: UITableView!
     
     fileprivate var addresses: [Address] = []
+    
+    private let addressService = AddressService()
 
     private let disposeBag = DisposeBag()
     private let throttleInterval = 1.0
@@ -27,30 +29,16 @@ class SearchAddressViewController: UIViewController {
         addressSearchBar.becomeFirstResponder()
 
         addressSearchBar.rx.text.throttle(throttleInterval, scheduler: MainScheduler.instance).subscribe(onNext: { [unowned self] query in
-            self.getAdresses(text: self.addressSearchBar.text ?? "")
+            self.addressService.getAddresses(string: self.addressSearchBar.text ?? "", completion: { (addresses) in
+                self.addresses = addresses
+                self.addressTableView.reloadData()
+            })
         }).disposed(by: disposeBag)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    private func getAdresses(text: String){
-        let options = ForwardGeocodeOptions(query: text)
-        
-        options.allowedScopes = [.address, .pointOfInterest]
-        let geocoder = Geocoder.shared
-        
-        geocoder.geocode(options) { (placemarks, attribution, error) in
-            guard let placemarks = placemarks, placemarks.count > 0 else {
-                self.addresses = []
-                return
-            }
-            let foundAddresses = placemarks.filter({$0.location != nil && $0.qualifiedName != nil && !($0.qualifiedName?.isEmpty)!})
-            self.addresses = foundAddresses.map{Address(mapBoxDic: $0.addressDictionary as! [String: Any], coordinate: $0.location!, printableAddress: $0.qualifiedName!)}
-            self.addressTableView.reloadData()
-        }
     }
 }
 
