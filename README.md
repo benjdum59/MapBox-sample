@@ -30,3 +30,9 @@ Add an abstract layer in order to change the map provider (Google Maps, Apple Pl
 ### Step 6 
 Add Unit Tests (code coverage: ~5-10%)
 
+## Installation / Run
+Open xcworkspace file to run the application. If you want to add new pods, you can do a pod install before opening workspace.
+
+## Notes
+### Step1
+ - Using MapView in storyboard make it crash, so the view is added programmatically
