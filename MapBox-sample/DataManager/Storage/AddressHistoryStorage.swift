@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class AddressHistoryStorage {
+final class AddressHistoryStorage: AddressStorageProtocol {
     private let keyStorage = "AddressHistoryStorage"
     private let userDefaults = UserDefaults.standard
     func getAddresses(completion:([Address])->Void){
@@ -23,7 +23,6 @@ final class AddressHistoryStorage {
     func saveAddresses(addresses: [Address], completion:()->Void) {
         let data = NSKeyedArchiver.archivedData(withRootObject: addresses)
         userDefaults.set(data, forKey: keyStorage)
-//        userDefaults.synchronize()
         completion()
     }
 }

@@ -54,3 +54,7 @@ Open xcworkspace file to run the application. If you want to add new pods, you c
 - Make some refacto: creation of a DataManager and an address Business Logical Layer
 - Persist the data into the UserDefaults since it is an easy way to persist/retrieve data for small volume and non critical data
 - The tableView in the SearchAdressViewController has 1 or 2 sections, depending on the value of the search history (if no history, only 1 section). For the history section, the addresses are shown in reverse order.
+
+### Step5
+- I don't know if pins have to be removed when another address is selected. So I decided to keep them (they were removed before this step)
+- For the map, I created a map container which is initialized with a MapProtocol. MapBoxImplementation implements this protocol

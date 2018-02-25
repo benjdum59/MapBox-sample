@@ -9,7 +9,7 @@
 import Foundation
 import MapboxGeocoder
 
-final class AddressService{
+final class AddressService: AddressServiceProtocol{
     private let geocoder = Geocoder.shared
 
     func searchAddresses(string: String, completion:@escaping ([Address])->Void) {
