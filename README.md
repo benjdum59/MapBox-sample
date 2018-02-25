@@ -42,3 +42,10 @@ Open xcworkspace file to run the application. If you want to add new pods, you c
  - Use of a dedicated ViewController in charge of searching addresses
  - Creation of Address model
  - Creation of an Address Service
+
+### Step 3
+- Use the MGLMapViewDelegate methods. shouldChangeFrom method is used to move the pin during the scroll and regionDidChangeWith method is called at the end of scroll to get the address of the current center
+- Add an extension of Address to format the address in the searchBar as desired. If we can't format as desired (empty string), we use the printableAddress get from the API
+- Add a UIImageView (image is a pin) in the center of mapViewContainer. It helps user to see the center of the map. As moving the current pin is not really fluent, we may want to remove it since at the end of the scoll, pin view (from MapBox) and pin image (from UIImageView) have the same frame (imageView is in front of pin view from MapBox)
+- Make some fix on UISearchBar from MapViewController (removing clear button and cursor)
+- When an address is in UISearchBar from MapViewController, and the user click on the search, the current string is sent to the SearchAddressViewController to pre-fill its search bar (and we search the addresses).
