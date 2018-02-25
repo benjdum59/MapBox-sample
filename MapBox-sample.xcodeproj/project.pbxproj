@@ -17,6 +17,15 @@
 		09AA25DB204192AB00565CED /* SearchAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA25DA204192AB00565CED /* SearchAddressViewController.swift */; };
 		09AA25DC204192AB00565CED /* SearchAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA25DA204192AB00565CED /* SearchAddressViewController.swift */; };
 		09AA25DD204192AB00565CED /* SearchAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA25DA204192AB00565CED /* SearchAddressViewController.swift */; };
+		09C9D56F2042B4CE004DBC07 /* AddressHistoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C9D56E2042B4CE004DBC07 /* AddressHistoryStorage.swift */; };
+		09C9D5702042B4CE004DBC07 /* AddressHistoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C9D56E2042B4CE004DBC07 /* AddressHistoryStorage.swift */; };
+		09C9D5712042B4CE004DBC07 /* AddressHistoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C9D56E2042B4CE004DBC07 /* AddressHistoryStorage.swift */; };
+		09C9D5742042B8DD004DBC07 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C9D5732042B8DD004DBC07 /* DataManager.swift */; };
+		09C9D5752042B8DD004DBC07 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C9D5732042B8DD004DBC07 /* DataManager.swift */; };
+		09C9D5762042B8DD004DBC07 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C9D5732042B8DD004DBC07 /* DataManager.swift */; };
+		09C9D5792042B916004DBC07 /* AddressBLL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C9D5782042B916004DBC07 /* AddressBLL.swift */; };
+		09C9D57A2042B916004DBC07 /* AddressBLL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C9D5782042B916004DBC07 /* AddressBLL.swift */; };
+		09C9D57B2042B916004DBC07 /* AddressBLL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C9D5782042B916004DBC07 /* AddressBLL.swift */; };
 		09DF39B5204169A10058B30B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DF39B4204169A10058B30B /* AppDelegate.swift */; };
 		09DF39B7204169A10058B30B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DF39B6204169A10058B30B /* MapViewController.swift */; };
 		09DF39BA204169A10058B30B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09DF39B8204169A10058B30B /* Main.storyboard */; };
@@ -63,6 +72,9 @@
 		092E858F2041717E00E29F11 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		092E85922041749B00E29F11 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		09AA25DA204192AB00565CED /* SearchAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressViewController.swift; sourceTree = "<group>"; };
+		09C9D56E2042B4CE004DBC07 /* AddressHistoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressHistoryStorage.swift; sourceTree = "<group>"; };
+		09C9D5732042B8DD004DBC07 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		09C9D5782042B916004DBC07 /* AddressBLL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBLL.swift; sourceTree = "<group>"; };
 		09DF39B1204169A10058B30B /* MapBox-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MapBox-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09DF39B4204169A10058B30B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09DF39B6204169A10058B30B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +159,33 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		09C9D56D2042B4A3004DBC07 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				09C9D56E2042B4CE004DBC07 /* AddressHistoryStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		09C9D5722042B824004DBC07 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				09C9D5772042B908004DBC07 /* BLL */,
+				09C9D5732042B8DD004DBC07 /* DataManager.swift */,
+				09C9D56D2042B4A3004DBC07 /* Storage */,
+				09F28DCD2041FD400040DBF6 /* Service */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		09C9D5772042B908004DBC07 /* BLL */ = {
+			isa = PBXGroup;
+			children = (
+				09C9D5782042B916004DBC07 /* AddressBLL.swift */,
+			);
+			path = BLL;
+			sourceTree = "<group>";
+		};
 		09DF39A8204169A10058B30B = {
 			isa = PBXGroup;
 			children = (
@@ -172,8 +211,8 @@
 		09DF39B3204169A10058B30B /* MapBox-sample */ = {
 			isa = PBXGroup;
 			children = (
+				09C9D5722042B824004DBC07 /* DataManager */,
 				09F28DD220420FB60040DBF6 /* Utils */,
-				09F28DCD2041FD400040DBF6 /* Service */,
 				092E85912041748300E29F11 /* Model */,
 				092E858A20416D1000E29F11 /* Conf */,
 				092E858920416CEC00E29F11 /* UI */,
@@ -563,10 +602,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				09F28DC220419E4E0040DBF6 /* Address.swift in Sources */,
+				09C9D5742042B8DD004DBC07 /* DataManager.swift in Sources */,
+				09C9D56F2042B4CE004DBC07 /* AddressHistoryStorage.swift in Sources */,
 				09F28DD420420FD50040DBF6 /* UISearchBar+Utils.swift in Sources */,
 				09DF39B7204169A10058B30B /* MapViewController.swift in Sources */,
 				09AA25DB204192AB00565CED /* SearchAddressViewController.swift in Sources */,
 				09DF39B5204169A10058B30B /* AppDelegate.swift in Sources */,
+				09C9D5792042B916004DBC07 /* AddressBLL.swift in Sources */,
 				09F28DCF2041FD5D0040DBF6 /* AddressService.swift in Sources */,
 				09F28DC62041B44E0040DBF6 /* SearchAddressTableViewCell.swift in Sources */,
 				09F28DCA2041B6FB0040DBF6 /* SearchAddressDelegate.swift in Sources */,
@@ -582,9 +624,12 @@
 				09F28DC72041B44E0040DBF6 /* SearchAddressTableViewCell.swift in Sources */,
 				09DF39CA204169A10058B30B /* MapBox_sampleTests.swift in Sources */,
 				09AA25DC204192AB00565CED /* SearchAddressViewController.swift in Sources */,
+				09C9D57A2042B916004DBC07 /* AddressBLL.swift in Sources */,
+				09C9D5702042B4CE004DBC07 /* AddressHistoryStorage.swift in Sources */,
 				092E858D20416D8500E29F11 /* Constants.swift in Sources */,
 				092E85942041749B00E29F11 /* Coordinate.swift in Sources */,
 				09F28DD02041FD5D0040DBF6 /* AddressService.swift in Sources */,
+				09C9D5752042B8DD004DBC07 /* DataManager.swift in Sources */,
 				09F28DCB2041B6FB0040DBF6 /* SearchAddressDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -596,9 +641,12 @@
 				09F28DC82041B44E0040DBF6 /* SearchAddressTableViewCell.swift in Sources */,
 				09DF39D5204169A10058B30B /* MapBox_sampleUITests.swift in Sources */,
 				09AA25DD204192AB00565CED /* SearchAddressViewController.swift in Sources */,
+				09C9D57B2042B916004DBC07 /* AddressBLL.swift in Sources */,
+				09C9D5712042B4CE004DBC07 /* AddressHistoryStorage.swift in Sources */,
 				092E858E20416D8500E29F11 /* Constants.swift in Sources */,
 				092E85952041749B00E29F11 /* Coordinate.swift in Sources */,
 				09F28DD12041FD5D0040DBF6 /* AddressService.swift in Sources */,
+				09C9D5762042B8DD004DBC07 /* DataManager.swift in Sources */,
 				09F28DCC2041B6FB0040DBF6 /* SearchAddressDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

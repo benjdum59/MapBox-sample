@@ -18,7 +18,6 @@ class SearchAddressViewController: UIViewController {
     var initialText: String = ""
     
     fileprivate var addresses: [Address] = []
-    private let addressService = AddressService()
     private let disposeBag = DisposeBag()
     private let throttleInterval = 1.0
     
@@ -38,10 +37,10 @@ class SearchAddressViewController: UIViewController {
     }
     
     private func getAddresses(){
-        self.addressService.getAddresses(string: self.addressSearchBar.text ?? "", completion: { (addresses) in
+        dataManager.addressBLL.addressService.searchAddresses(string: self.addressSearchBar.text ?? "") { (addresses) in
             self.addresses = addresses
             self.addressTableView.reloadData()
-        })
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -18,7 +18,7 @@ class MapViewController: UIViewController {
     fileprivate var mapView: MGLMapView!
     fileprivate let locationManager = CLLocationManager()
     fileprivate var currentPin : MGLPointAnnotation?
-    fileprivate var addressService = AddressService()
+//    fileprivate var addressService = AddressService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,7 +116,7 @@ extension MapViewController: MGLMapViewDelegate {
             guard let currentPin = currentPin else {
                 return
             }
-            addressService.getAddress(coordinate: currentPin.coordinate, completion: { (address) in
+            dataManager.addressBLL.getAddress(coordinate: currentPin.coordinate, completion: { (address) in
                 guard let address = address else {
                     return
                 }

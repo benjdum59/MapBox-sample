@@ -9,9 +9,15 @@
 import Foundation
 import CoreLocation
 
-struct Coordinate{
+class Coordinate: NSCoding{
+    
     let latitude: Double
     let longitude: Double
+    
+    private struct SerializationKeys {
+        static let latitude = "latitude"
+        static let longitude = "longitude"
+    }
     
     init(latitude: Double, longitude: Double) {
         self.latitude = latitude
@@ -21,6 +27,17 @@ struct Coordinate{
     init(location: CLLocation) {
         self.latitude = location.coordinate.latitude
         self.longitude = location.coordinate.longitude
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(latitude, forKey: SerializationKeys.latitude)
+        aCoder.encode(longitude, forKey: SerializationKeys.longitude)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.latitude = aDecoder.decodeObject(forKey: SerializationKeys.latitude) as! Double
+        self.longitude = aDecoder.decodeObject(forKey: SerializationKeys.longitude) as! Double
+
     }
 }
 
