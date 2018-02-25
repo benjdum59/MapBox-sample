@@ -10,6 +10,7 @@ import UIKit
 import MapboxGeocoder
 import RxCocoa
 import RxSwift
+import Hero
 
 class SearchAddressViewController: UIViewController {
     @IBOutlet weak var addressSearchBar: UISearchBar!
@@ -27,6 +28,9 @@ class SearchAddressViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hero.isEnabled = true
+        addressSearchBar.hero.id = Constants.Hero.searchBarId
+        addressTableView.hero.modifiers = [.translate(y:UIScreen.main.bounds.size.height - addressSearchBar.frame.size.height)]
         addressSearchBar.becomeFirstResponder()
         addressSearchBar.text = initialText
         dataManager.addressBLL.getAddressHistory { (addresses) in

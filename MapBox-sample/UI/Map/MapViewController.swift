@@ -9,6 +9,7 @@
 import UIKit
 import Mapbox
 import CoreLocation
+import Hero
 
 class MapViewController: UIViewController {
     
@@ -22,6 +23,7 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         adressSearchBar.textField?.clearButtonMode = .never
         adressSearchBar.textField?.tintColor = UIColor.clear
+        adressSearchBar.hero.id = Constants.Hero.searchBarId
         mapContainer = MapContainer(map: MapBoxImplementation(view: mapViewContainer, delegate: self))
         configureLocation()
     }

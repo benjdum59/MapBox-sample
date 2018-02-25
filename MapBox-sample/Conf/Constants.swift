@@ -23,4 +23,8 @@ struct Constants {
         private init(){}
         static let searchAddressCell = "searchAddressCell"
     }
+    struct Hero {
+        private init(){}
+        static let searchBarId = "searchBar"
+    }
 }
