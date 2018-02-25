@@ -38,5 +38,10 @@ class Coordinate: NSObject, NSCoding{
         self.latitude = aDecoder.decodeDouble(forKey: SerializationKeys.latitude)
         self.longitude = aDecoder.decodeDouble(forKey: SerializationKeys.longitude)
     }
+    
+    static func ==(lhs: Coordinate, rhs: Coordinate) -> Bool{
+        return lhs.latitude == rhs.latitude
+            && lhs.longitude == rhs.longitude
+    }
 }
 

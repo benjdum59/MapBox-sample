@@ -76,6 +76,15 @@ class Address: NSObject, NSCoding {
 
     }
     
+    static func ==(lhs: Address, rhs: Address) -> Bool{
+        return lhs.streetName == rhs.streetName
+            && lhs.streetNumber == rhs.streetNumber
+            && lhs.postalCode == rhs.postalCode
+            && lhs.printableAddress == rhs.printableAddress
+            && lhs.town == rhs.town
+            && lhs.coordinate == rhs.coordinate
+    }
+    
 }
 
 extension Address {
