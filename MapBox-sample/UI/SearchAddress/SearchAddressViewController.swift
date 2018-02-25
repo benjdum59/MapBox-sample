@@ -30,7 +30,7 @@ class SearchAddressViewController: UIViewController {
         addressSearchBar.becomeFirstResponder()
         addressSearchBar.text = initialText
         dataManager.addressBLL.getAddressHistory { (addresses) in
-            history = addresses
+            history = addresses.reversed()
             getAddresses()
         }
 
