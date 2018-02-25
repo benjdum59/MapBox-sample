@@ -31,7 +31,6 @@ class SearchAddressViewController: UIViewController {
         self.hero.isEnabled = true
         addressSearchBar.hero.id = Constants.Hero.searchBarId
         addressTableView.hero.modifiers = [.translate(y:UIScreen.main.bounds.size.height - addressSearchBar.frame.size.height)]
-        addressSearchBar.becomeFirstResponder()
         addressSearchBar.text = initialText
         dataManager.addressBLL.getAddressHistory { (addresses) in
             history = addresses.reversed()
@@ -43,16 +42,16 @@ class SearchAddressViewController: UIViewController {
         }).disposed(by: disposeBag)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        addressSearchBar.becomeFirstResponder()
+    }
+    
     private func getAddresses(){
         dataManager.addressBLL.searchAddress(string: self.addressSearchBar.text ?? "") { (addresses) in
             self.addresses = addresses
             self.addressTableView.reloadData()
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 

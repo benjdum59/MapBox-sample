@@ -28,11 +28,6 @@ class MapViewController: UIViewController {
         configureLocation()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     private func configureLocation(){
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -62,6 +57,7 @@ extension MapViewController: CLLocationManagerDelegate {
 
 extension MapViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
         performSegue(withIdentifier: Constants.Segue.searchAddress, sender: self)
     }
 }
