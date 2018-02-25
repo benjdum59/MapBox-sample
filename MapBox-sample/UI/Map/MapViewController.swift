@@ -57,9 +57,10 @@ extension MapViewController: CLLocationManagerDelegate {
 }
 
 extension MapViewController: UISearchBarDelegate {
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
+    
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         performSegue(withIdentifier: Constants.Segue.searchAddress, sender: self)
+        return false
     }
 }
 
