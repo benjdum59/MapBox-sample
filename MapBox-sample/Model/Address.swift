@@ -9,14 +9,14 @@
 import Foundation
 import CoreLocation
 
-class Address: NSCoding {
+class Address: NSObject, NSCoding {
     
     var streetNumber: String?
     var streetName: String?
     var postalCode: String?
     var town: String?
     var printableAddress: String?
-    var coordinate: Coordinate?
+    var coordinate: Coordinate
     
     private struct SerializationKeys {
         static let streetNumber = "streetNumber"
@@ -27,7 +27,7 @@ class Address: NSCoding {
         static let coordinate = "coordinate"
     }
     
-    init(streetNumber: String?, streetName: String?, postalCode: String?, town: String?, printableAddress: String?, coordinate: Coordinate?) {
+    init(streetNumber: String?, streetName: String?, postalCode: String?, town: String?, printableAddress: String?, coordinate: Coordinate) {
         self.streetName = streetName
         self.streetNumber = streetNumber
         self.postalCode = postalCode
@@ -57,12 +57,12 @@ class Address: NSCoding {
     }
     
     func encode(with aCoder: NSCoder) {
-        aCoder.encode(streetNumber, forKey: SerializationKeys.streetNumber)
-        aCoder.encode(streetName, forKey: SerializationKeys.streetName)
-        aCoder.encode(postalCode, forKey: SerializationKeys.postalCode)
-        aCoder.encode(town, forKey: SerializationKeys.town)
-        aCoder.encode(printableAddress, forKey: SerializationKeys.printableAddress)
-        aCoder.encode(coordinate, forKey: SerializationKeys.coordinate)
+        aCoder.encode(self.streetNumber, forKey: SerializationKeys.streetNumber)
+        aCoder.encode(self.streetName, forKey: SerializationKeys.streetName)
+        aCoder.encode(self.postalCode, forKey: SerializationKeys.postalCode)
+        aCoder.encode(self.town, forKey: SerializationKeys.town)
+        aCoder.encode(self.printableAddress, forKey: SerializationKeys.printableAddress)
+        aCoder.encode(self.coordinate, forKey: SerializationKeys.coordinate)
 
     }
     
@@ -72,7 +72,7 @@ class Address: NSCoding {
         self.postalCode = aDecoder.decodeObject(forKey: SerializationKeys.postalCode) as? String
         self.town = aDecoder.decodeObject(forKey: SerializationKeys.town) as? String
         self.printableAddress = aDecoder.decodeObject(forKey: SerializationKeys.printableAddress) as? String
-        self.coordinate = aDecoder.decodeObject(forKey: SerializationKeys.coordinate) as? Coordinate
+        self.coordinate = aDecoder.decodeObject(forKey: SerializationKeys.coordinate) as! Coordinate
 
     }
     

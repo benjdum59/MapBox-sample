@@ -10,8 +10,8 @@ import Foundation
 import CoreLocation
 
 class AddressBLL {
-    let addressStorage: AddressHistoryStorage
-    let addressService: AddressService
+    private let addressStorage: AddressHistoryStorage
+    private let addressService: AddressService
     
     init() {
         addressStorage = AddressHistoryStorage()
@@ -44,14 +44,14 @@ class AddressBLL {
     
     func saveAddress(address: Address, completion:()->Void) {
         addressStorage.getAddresses { (addresses) in
-            var filteredAddresses = addresses.filter({$0.coordinate?.latitude != address.coordinate?.latitude || $0.coordinate?.longitude != address.coordinate?.longitude})
+            var filteredAddresses = addresses.filter({$0.coordinate.latitude != address.coordinate.latitude || $0.coordinate.longitude != address.coordinate.longitude})
             if filteredAddresses.count < 2 {
                 filteredAddresses.append(address)
             } else {
                 filteredAddresses.remove(at: 0)
                 filteredAddresses.append(address)
             }
-            addressStorage.saveAddresses(addresses: addresses, completion: {
+            addressStorage.saveAddresses(addresses: filteredAddresses, completion: {
                 completion()
             })
         }

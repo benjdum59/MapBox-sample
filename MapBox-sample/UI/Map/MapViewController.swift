@@ -50,10 +50,10 @@ class MapViewController: UIViewController {
     }
     
     fileprivate func showLocation(address: Address){
-        guard let coordinate = address.coordinate else {
-            return
-        }
-        showLocation(location: CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude))
+//        guard let coordinate = address.coordinate else {
+//            return
+//        }
+        showLocation(location: CLLocationCoordinate2D(latitude: address.coordinate.latitude, longitude: address.coordinate.longitude))
     }
     
     fileprivate func showLocation(location: CLLocationCoordinate2D) {

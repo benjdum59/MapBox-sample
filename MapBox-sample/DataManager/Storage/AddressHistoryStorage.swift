@@ -10,18 +10,20 @@ import Foundation
 
 final class AddressHistoryStorage {
     private let keyStorage = "AddressHistoryStorage"
+    private let userDefaults = UserDefaults.standard
     func getAddresses(completion:([Address])->Void){
         guard let data = UserDefaults.standard.object(forKey: keyStorage) as? Data else {
             completion([])
             return
         }
-        completion(NSKeyedUnarchiver.unarchiveObject(with: data) as! [Address])
+        let decoded = NSKeyedUnarchiver.unarchiveObject(with: data) as! [Address]
+        completion(decoded)
     }
     
     func saveAddresses(addresses: [Address], completion:()->Void) {
         let data = NSKeyedArchiver.archivedData(withRootObject: addresses)
-        UserDefaults.standard.set(data, forKey: keyStorage)
-        UserDefaults.standard.synchronize()
+        userDefaults.set(data, forKey: keyStorage)
+//        userDefaults.synchronize()
         completion()
     }
 }

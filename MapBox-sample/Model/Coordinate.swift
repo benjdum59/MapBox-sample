@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-class Coordinate: NSCoding{
+class Coordinate: NSObject, NSCoding{
     
     let latitude: Double
     let longitude: Double
@@ -30,14 +30,13 @@ class Coordinate: NSCoding{
     }
     
     func encode(with aCoder: NSCoder) {
-        aCoder.encode(latitude, forKey: SerializationKeys.latitude)
-        aCoder.encode(longitude, forKey: SerializationKeys.longitude)
+        aCoder.encode(self.latitude, forKey: SerializationKeys.latitude)
+        aCoder.encode(self.longitude, forKey: SerializationKeys.longitude)
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.latitude = aDecoder.decodeObject(forKey: SerializationKeys.latitude) as! Double
-        self.longitude = aDecoder.decodeObject(forKey: SerializationKeys.longitude) as! Double
-
+        self.latitude = aDecoder.decodeDouble(forKey: SerializationKeys.latitude)
+        self.longitude = aDecoder.decodeDouble(forKey: SerializationKeys.longitude)
     }
 }
 
