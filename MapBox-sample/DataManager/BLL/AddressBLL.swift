@@ -10,8 +10,8 @@ import Foundation
 import CoreLocation
 
 class AddressBLL {
-    private let addressStorage: AddressHistoryStorage
-    private let addressService: AddressService
+    private let addressStorage: AddressStorageProtocol
+    private let addressService: AddressServiceProtocol
     
     init() {
         addressStorage = AddressHistoryStorage()
