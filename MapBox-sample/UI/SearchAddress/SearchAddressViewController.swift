@@ -18,7 +18,8 @@ class SearchAddressViewController: UIViewController {
     var initialText: String = ""
     
     fileprivate var addresses: [Address] = []
-    private let addressService = AddressService()
+    fileprivate var history: [Address] = []
+
     private let disposeBag = DisposeBag()
     private let throttleInterval = 1.0
     
@@ -28,7 +29,8 @@ class SearchAddressViewController: UIViewController {
         super.viewDidLoad()
         addressSearchBar.becomeFirstResponder()
         addressSearchBar.text = initialText
-        if !initialText.isEmpty {
+        dataManager.addressBLL.getAddressHistory { (addresses) in
+            history = addresses.reversed()
             getAddresses()
         }
 
@@ -38,10 +40,10 @@ class SearchAddressViewController: UIViewController {
     }
     
     private func getAddresses(){
-        self.addressService.getAddresses(string: self.addressSearchBar.text ?? "", completion: { (addresses) in
+        dataManager.addressBLL.searchAddress(string: self.addressSearchBar.text ?? "") { (addresses) in
             self.addresses = addresses
             self.addressTableView.reloadData()
-        })
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,21 +60,31 @@ extension SearchAddressViewController: UISearchBarDelegate {
 
 extension SearchAddressViewController: UITableViewDataSource {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return history.count > 0 ? 2 : 1
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return section == tableView.numberOfSections - 1 ? "Search results" : "History"
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return addresses.count
+        return (section == tableView.numberOfSections - 1) ? addresses.count : history.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifier.searchAddressCell) as! SearchAddressTableViewCell
-        cell.adress = addresses[indexPath.row]
+        cell.adress = indexPath.section == tableView.numberOfSections - 1 ? addresses[indexPath.row] : history[indexPath.row]
         return cell
     }
 }
 
 extension SearchAddressViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let address = addresses[indexPath.row]
+        let address = (indexPath.section == tableView.numberOfSections - 1) ? addresses[indexPath.row] : history[indexPath.row]
         delegate?.didSelectAddress(address: address)
-        dismiss(animated: true, completion: nil)
+        dataManager.addressBLL.saveAddress(address: address) {
+            dismiss(animated: true, completion: nil)
+        }
     }
 }

@@ -49,3 +49,8 @@ Open xcworkspace file to run the application. If you want to add new pods, you c
 - Add a UIImageView (image is a pin) in the center of mapViewContainer. It helps user to see the center of the map. As moving the current pin is not really fluent, we may want to remove it since at the end of the scoll, pin view (from MapBox) and pin image (from UIImageView) have the same frame (imageView is in front of pin view from MapBox)
 - Make some fix on UISearchBar from MapViewController (removing clear button and cursor)
 - When an address is in UISearchBar from MapViewController, and the user click on the search, the current string is sent to the SearchAddressViewController to pre-fill its search bar (and we search the addresses).
+
+### Step4
+- Make some refacto: creation of a DataManager and an address Business Logical Layer
+- Persist the data into the UserDefaults since it is an easy way to persist/retrieve data for small volume and non critical data
+- The tableView in the SearchAdressViewController has 1 or 2 sections, depending on the value of the search history (if no history, only 1 section). For the history section, the addresses are shown in reverse order.

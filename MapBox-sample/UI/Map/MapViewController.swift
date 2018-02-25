@@ -18,7 +18,6 @@ class MapViewController: UIViewController {
     fileprivate var mapView: MGLMapView!
     fileprivate let locationManager = CLLocationManager()
     fileprivate var currentPin : MGLPointAnnotation?
-    fileprivate var addressService = AddressService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,10 +49,7 @@ class MapViewController: UIViewController {
     }
     
     fileprivate func showLocation(address: Address){
-        guard let coordinate = address.coordinate else {
-            return
-        }
-        showLocation(location: CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude))
+        showLocation(location: CLLocationCoordinate2D(latitude: address.coordinate.latitude, longitude: address.coordinate.longitude))
     }
     
     fileprivate func showLocation(location: CLLocationCoordinate2D) {
@@ -116,7 +112,7 @@ extension MapViewController: MGLMapViewDelegate {
             guard let currentPin = currentPin else {
                 return
             }
-            addressService.getAddress(coordinate: currentPin.coordinate, completion: { (address) in
+            dataManager.addressBLL.getAddress(coordinate: currentPin.coordinate, completion: { (address) in
                 guard let address = address else {
                     return
                 }

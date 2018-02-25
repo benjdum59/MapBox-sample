@@ -12,7 +12,7 @@ import MapboxGeocoder
 final class AddressService{
     private let geocoder = Geocoder.shared
 
-    func getAddresses(string: String, completion:@escaping ([Address])->Void) {
+    func searchAddresses(string: String, completion:@escaping ([Address])->Void) {
         let options = ForwardGeocodeOptions(query: string)
         
         options.allowedScopes = [.address, .pointOfInterest]
