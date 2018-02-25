@@ -47,3 +47,12 @@ class Address {
     }
     
 }
+
+extension Address {
+    var formattedAddress: String {
+        get{
+            let formattedString = [self.streetNumber, self.streetName, self.postalCode, self.town].flatMap({$0}).joined(separator: ", ")
+            return formattedString.isEmpty ? (self.printableAddress ?? "") : formattedString
+        }
+    }
+}

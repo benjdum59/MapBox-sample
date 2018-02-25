@@ -10,12 +10,12 @@ import Foundation
 import MapboxGeocoder
 
 final class AddressService{
-    
+    private let geocoder = Geocoder.shared
+
     func getAddresses(string: String, completion:@escaping ([Address])->Void) {
         let options = ForwardGeocodeOptions(query: string)
         
         options.allowedScopes = [.address, .pointOfInterest]
-        let geocoder = Geocoder.shared
         
         geocoder.geocode(options) { (placemarks, attribution, error) in
             guard let placemarks = placemarks, placemarks.count > 0 else {
@@ -24,6 +24,19 @@ final class AddressService{
             }
             let foundAddresses = placemarks.filter({$0.location != nil && $0.qualifiedName != nil && !($0.qualifiedName?.isEmpty)!})
             completion(foundAddresses.map{Address(mapBoxDic: $0.addressDictionary as! [String: Any], coordinate: $0.location!, printableAddress: $0.qualifiedName!)})
+        }
+    }
+    
+    func getAddress(coordinate:CLLocationCoordinate2D, completion:@escaping (Address?)->Void){
+        let options = ReverseGeocodeOptions(coordinate: coordinate)
+        
+        geocoder.geocode(options) { (placemarks, attribution, error) in
+            guard let placemark = placemarks?.first else {
+                completion(nil)
+                return
+            }
+            let location = Coordinate(latitude: coordinate.latitude, longitude: coordinate.longitude)
+            completion(Address(mapBoxDic: placemark.addressDictionary as! [String: Any], coordinate: location, printableAddress: placemark.qualifiedName ?? ""))
         }
     }
 }

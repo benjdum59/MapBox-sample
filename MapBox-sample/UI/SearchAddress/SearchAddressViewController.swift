@@ -15,10 +15,10 @@ class SearchAddressViewController: UIViewController {
     @IBOutlet weak var addressSearchBar: UISearchBar!
     @IBOutlet weak var addressTableView: UITableView!
     
-    fileprivate var addresses: [Address] = []
+    var initialText: String = ""
     
+    fileprivate var addresses: [Address] = []
     private let addressService = AddressService()
-
     private let disposeBag = DisposeBag()
     private let throttleInterval = 1.0
     
@@ -27,13 +27,21 @@ class SearchAddressViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addressSearchBar.becomeFirstResponder()
+        addressSearchBar.text = initialText
+        if !initialText.isEmpty {
+            getAddresses()
+        }
 
         addressSearchBar.rx.text.throttle(throttleInterval, scheduler: MainScheduler.instance).subscribe(onNext: { [unowned self] query in
-            self.addressService.getAddresses(string: self.addressSearchBar.text ?? "", completion: { (addresses) in
-                self.addresses = addresses
-                self.addressTableView.reloadData()
-            })
+            self.getAddresses()
         }).disposed(by: disposeBag)
+    }
+    
+    private func getAddresses(){
+        self.addressService.getAddresses(string: self.addressSearchBar.text ?? "", completion: { (addresses) in
+            self.addresses = addresses
+            self.addressTableView.reloadData()
+        })
     }
 
     override func didReceiveMemoryWarning() {

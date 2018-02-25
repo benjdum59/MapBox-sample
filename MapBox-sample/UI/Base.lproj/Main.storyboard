@@ -55,6 +55,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="adressSearchBar" destination="8qI-B6-BXa" id="lOq-ey-m9X"/>
                         <outlet property="mapViewContainer" destination="QLU-xt-2a5" id="AvK-Fq-uVU"/>
                         <segue destination="NE8-Eg-5iy" kind="presentation" identifier="searchAddress" animates="NO" modalTransitionStyle="crossDissolve" id="W8j-ux-FuO"/>
                     </connections>

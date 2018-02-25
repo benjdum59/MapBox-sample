@@ -13,7 +13,7 @@ struct Constants {
     struct MapBox {
         private init(){}
         static let url = URL(string: "mapbox://styles/mapbox/streets-v10")
-        static let defaultZoom: Double = 9
+        static let defaultZoom: Double = 16
     }
     struct Segue {
         private init(){}
