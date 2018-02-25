@@ -52,12 +52,13 @@ extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last! as CLLocation
         mapContainer?.showLocation(location: location.coordinate)
+        manager.stopUpdatingLocation()
     }
 }
 
 extension MapViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        searchBar.endEditing(true)
+        searchBar.resignFirstResponder()
         performSegue(withIdentifier: Constants.Segue.searchAddress, sender: self)
     }
 }
