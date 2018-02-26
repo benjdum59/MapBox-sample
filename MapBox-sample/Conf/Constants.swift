@@ -27,4 +27,14 @@ struct Constants {
         private init(){}
         static let searchBarId = "searchBar"
     }
+    struct Trads {
+        private init(){}
+        static let searchPlaceholder = "search_placeholder".localized
+        static let searchResults = "search_results".localized
+        static let searchHistory = "search_history".localized
+        static let alertTitle = "alert_title".localized
+        static let alertMessage = "alert_message".localized
+        static let ok = "ok".localized
+        static let alertSettings = "alert_settings".localized
+    }
 }

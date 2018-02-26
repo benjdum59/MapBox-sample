@@ -33,5 +33,5 @@ xcuserdata/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 
-
+.fastlane/test_output
 # End of https://www.gitignore.io/api/xcode

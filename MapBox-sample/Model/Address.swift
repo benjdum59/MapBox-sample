@@ -76,6 +76,15 @@ class Address: NSObject, NSCoding {
 
     }
     
+    static func ==(lhs: Address, rhs: Address) -> Bool{
+        return lhs.streetName == rhs.streetName
+            && lhs.streetNumber == rhs.streetNumber
+            && lhs.postalCode == rhs.postalCode
+            && lhs.printableAddress == rhs.printableAddress
+            && lhs.town == rhs.town
+            && lhs.coordinate == rhs.coordinate
+    }
+    
 }
 
 extension Address {
@@ -84,5 +93,19 @@ extension Address {
             let formattedString = [self.streetNumber, self.streetName, self.postalCode, self.town].flatMap({$0}).joined(separator: ", ")
             return formattedString.isEmpty ? (self.printableAddress ?? "") : formattedString
         }
+    }
+}
+
+extension Array where Element : Address {
+    @discardableResult mutating func add(address: Address, maxElements: Int) -> [Address] {
+        var filteredAddresses: [Address] = self.filter({$0.coordinate.latitude != address.coordinate.latitude || $0.coordinate.longitude != address.coordinate.longitude})
+        if filteredAddresses.count < maxElements {
+            filteredAddresses.append(address)
+        } else {
+            filteredAddresses.remove(at: 0)
+            filteredAddresses.append(address)
+        }
+        self = filteredAddresses as! [Element]
+        return filteredAddresses
     }
 }

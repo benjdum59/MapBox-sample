@@ -21,16 +21,16 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        adressSearchBar.textField?.clearButtonMode = .never
-        adressSearchBar.textField?.tintColor = UIColor.clear
-        adressSearchBar.hero.id = Constants.Hero.searchBarId
+        configureSearchBar()
         mapContainer = MapContainer(map: MapBoxImplementation(view: mapViewContainer, delegate: self))
         configureLocation()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func configureSearchBar(){
+        adressSearchBar.textField?.clearButtonMode = .never
+        adressSearchBar.textField?.tintColor = UIColor.clear
+        adressSearchBar.placeholder = Constants.Trads.searchPlaceholder
+        adressSearchBar.hero.id = Constants.Hero.searchBarId
     }
     
     private func configureLocation(){
@@ -42,6 +42,30 @@ class MapViewController: UIViewController {
     
     fileprivate func showLocation(address: Address){
         mapContainer?.showLocation(location: CLLocationCoordinate2D(latitude: address.coordinate.latitude, longitude: address.coordinate.longitude))
+    }
+    
+    fileprivate func presentAlert(){
+        let alert = UIAlertController(title: Constants.Trads.alertTitle, message: Constants.Trads.alertMessage, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: Constants.Trads.ok, style: .default) { (action) in
+            self.configureLocation()
+        }
+        let settingsAction = UIAlertAction(title: Constants.Trads.alertSettings, style: .default) { (_) -> Void in
+            guard let settingsUrl = URL(string: UIApplicationOpenSettingsURLString) else {
+                return
+            }
+            if UIApplication.shared.canOpenURL(settingsUrl) {
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                    })
+                } else {
+                    UIApplication.shared.openURL(settingsUrl)
+                    self.presentAlert()
+                }
+            }
+        }
+        alert.addAction(settingsAction)
+        alert.addAction(alertAction)
+        present(alert, animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -57,12 +81,19 @@ extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last! as CLLocation
         mapContainer?.showLocation(location: location.coordinate)
+        manager.stopUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        presentAlert()
     }
 }
 
 extension MapViewController: UISearchBarDelegate {
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+    
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         performSegue(withIdentifier: Constants.Segue.searchAddress, sender: self)
+        return false
     }
 }
 

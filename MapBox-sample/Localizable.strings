@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  MapBox-sample
+
+  Created by Benjamin DUMONT on 26/02/2018.
+  Copyright © 2018 Benjamin DUMONT. All rights reserved.
+*/
+
+"search_placeholder" = "Search for an address";
+"search_results" = "Search results";
+"search_history" = "History";
+"alert_title" = "Error";
+"alert_message" = "This application needs that you active localisation service for this app.";
+"ok" = "OK";
+"alert_settings" = "Settings";
