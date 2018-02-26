@@ -21,11 +21,16 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        adressSearchBar.textField?.clearButtonMode = .never
-        adressSearchBar.textField?.tintColor = UIColor.clear
-        adressSearchBar.hero.id = Constants.Hero.searchBarId
+        configureSearchBar()
         mapContainer = MapContainer(map: MapBoxImplementation(view: mapViewContainer, delegate: self))
         configureLocation()
+    }
+    
+    private func configureSearchBar(){
+        adressSearchBar.textField?.clearButtonMode = .never
+        adressSearchBar.textField?.tintColor = UIColor.clear
+        adressSearchBar.placeholder = Constants.Trads.searchPlaceholder
+        adressSearchBar.hero.id = Constants.Hero.searchBarId
     }
     
     private func configureLocation(){

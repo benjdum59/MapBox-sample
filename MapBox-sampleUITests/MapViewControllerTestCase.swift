@@ -29,7 +29,7 @@ class MapViewControllerTestCase: XCTestCase {
     }
     
     func testView() {
-        
+                
 
     }
     

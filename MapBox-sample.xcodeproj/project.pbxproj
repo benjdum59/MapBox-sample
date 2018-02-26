@@ -55,12 +55,12 @@
 		09E9CCF0204411F700162210 /* AddressServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9CCEF204411F700162210 /* AddressServiceMock.swift */; };
 		09E9CCF1204411F700162210 /* AddressServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9CCEF204411F700162210 /* AddressServiceMock.swift */; };
 		09E9CCF620441E5400162210 /* MapViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9CCF520441E5400162210 /* MapViewControllerTestCase.swift */; };
-		09E9CCF920441F3500162210 /* File.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09E9CCF820441F3500162210 /* File.strings */; };
-		09E9CCFA20441F3500162210 /* File.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09E9CCF820441F3500162210 /* File.strings */; };
-		09E9CCFB20441F3500162210 /* File.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09E9CCF820441F3500162210 /* File.strings */; };
 		09E9CCFD2044203500162210 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9CCFC2044203500162210 /* String+Utils.swift */; };
 		09E9CCFE2044203500162210 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9CCFC2044203500162210 /* String+Utils.swift */; };
 		09E9CCFF2044203500162210 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9CCFC2044203500162210 /* String+Utils.swift */; };
+		09E9CD012044330300162210 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09E9CD002044330300162210 /* Localizable.strings */; };
+		09E9CD022044330300162210 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09E9CD002044330300162210 /* Localizable.strings */; };
+		09E9CD032044330300162210 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09E9CD002044330300162210 /* Localizable.strings */; };
 		09F28DC220419E4E0040DBF6 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F28DC120419E4E0040DBF6 /* Address.swift */; };
 		09F28DC62041B44E0040DBF6 /* SearchAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F28DC52041B44E0040DBF6 /* SearchAddressTableViewCell.swift */; };
 		09F28DC72041B44E0040DBF6 /* SearchAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F28DC52041B44E0040DBF6 /* SearchAddressTableViewCell.swift */; };
@@ -124,8 +124,8 @@
 		09E9CCED2044061700162210 /* BLLTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLLTest.swift; sourceTree = "<group>"; };
 		09E9CCEF204411F700162210 /* AddressServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressServiceMock.swift; sourceTree = "<group>"; };
 		09E9CCF520441E5400162210 /* MapViewControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerTestCase.swift; sourceTree = "<group>"; };
-		09E9CCF820441F3500162210 /* File.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = File.strings; sourceTree = "<group>"; };
 		09E9CCFC2044203500162210 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		09E9CD002044330300162210 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		09F28DC120419E4E0040DBF6 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		09F28DC52041B44E0040DBF6 /* SearchAddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressTableViewCell.swift; sourceTree = "<group>"; };
 		09F28DC92041B6FB0040DBF6 /* SearchAddressDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressDelegate.swift; sourceTree = "<group>"; };
@@ -263,7 +263,7 @@
 				09C9D57C2042EC44004DBC07 /* MapContainer.swift */,
 				09C9D57E2042ECD6004DBC07 /* MapBoxImplementation.swift */,
 				09C9D5822042ED0D004DBC07 /* MapProtocol.swift */,
-				09E9CCF820441F3500162210 /* File.strings */,
+				09E9CD002044330300162210 /* Localizable.strings */,
 			);
 			path = "MapBox-sample";
 			sourceTree = "<group>";
@@ -480,8 +480,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09E9CCF920441F3500162210 /* File.strings in Resources */,
 				09DF39BF204169A10058B30B /* LaunchScreen.storyboard in Resources */,
+				09E9CD012044330300162210 /* Localizable.strings in Resources */,
 				09DF39BC204169A10058B30B /* Assets.xcassets in Resources */,
 				09DF39BA204169A10058B30B /* Main.storyboard in Resources */,
 			);
@@ -491,7 +491,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09E9CCFA20441F3500162210 /* File.strings in Resources */,
+				09E9CD022044330300162210 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,7 +499,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09E9CCFB20441F3500162210 /* File.strings in Resources */,
+				09E9CD032044330300162210 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

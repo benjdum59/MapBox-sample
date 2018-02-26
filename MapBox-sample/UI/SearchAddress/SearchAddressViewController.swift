@@ -68,7 +68,7 @@ extension SearchAddressViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return section == tableView.numberOfSections - 1 ? "Search results" : "History"
+        return section == tableView.numberOfSections - 1 ? Constants.Trads.searchResults : Constants.Trads.searchHistory
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
