@@ -1,4 +1,7 @@
 # MapBox-sample
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c886d07eec7d4461a107dcadb050d257)](https://www.codacy.com/app/benjdum59/MapBox-sample?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=benjdum59/MapBox-sample&amp;utm_campaign=Badge_Grade)
+https://travis-ci.org/benjdum59/MapBox-sample.svg?branch=develop
+
 ## Subject
 ### Introduction
 This project is an introduction to MapBox. It is divided into 6 steps. At the end of each step, a git tag is made and named "ETAPE X" where X is the step number.
