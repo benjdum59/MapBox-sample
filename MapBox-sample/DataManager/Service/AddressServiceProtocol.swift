@@ -10,7 +10,6 @@ import Foundation
 import CoreLocation
 
 protocol AddressServiceProtocol {
-    func searchAddresses(string: String, completion:@escaping ([Address])->Void)
-    func getAddress(coordinate:CLLocationCoordinate2D, completion:@escaping (Address?)->Void)
-
+    func searchAddresses(string: String, completion:@escaping ([Address]) -> Void)
+    func getAddress(coordinate:CLLocationCoordinate2D, completion:@escaping (Address?) -> Void)
 }

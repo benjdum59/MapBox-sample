@@ -15,7 +15,7 @@ class SearchAddressTableViewCell: UITableViewCell {
             adressLabel.text = adress.printableAddress
         }
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -10,7 +10,6 @@ import Foundation
 import CoreLocation
 
 class Address: NSObject, NSCoding {
-    
     var streetNumber: String?
     var streetName: String?
     var postalCode: String?
@@ -38,7 +37,7 @@ class Address: NSObject, NSCoding {
     
     init(mapBoxDic: [String: Any], coordinate: Coordinate, printableAddress: String) {
         struct SerializeKeys {
-            private init(){}
+            private init() {}
             static let streetNumber = "subThoroughfare"
             static let streetName = "street"
             static let postalCode = "postalCode"
@@ -76,7 +75,7 @@ class Address: NSObject, NSCoding {
 
     }
     
-    static func ==(lhs: Address, rhs: Address) -> Bool{
+    static func ==(lhs: Address, rhs: Address) -> Bool {
         return lhs.streetName == rhs.streetName
             && lhs.streetNumber == rhs.streetNumber
             && lhs.postalCode == rhs.postalCode
@@ -84,12 +83,11 @@ class Address: NSObject, NSCoding {
             && lhs.town == rhs.town
             && lhs.coordinate == rhs.coordinate
     }
-    
 }
 
 extension Address {
     var formattedAddress: String {
-        get{
+        get {
             let formattedString = [self.streetNumber, self.streetName, self.postalCode, self.town].flatMap({$0}).joined(separator: ", ")
             return formattedString.isEmpty ? (self.printableAddress ?? "") : formattedString
         }
@@ -97,6 +95,7 @@ extension Address {
 }
 
 extension Array where Element : Address {
+
     @discardableResult mutating func add(address: Address, maxElements: Int) -> [Address] {
         var filteredAddresses: [Address] = self.filter({$0.coordinate.latitude != address.coordinate.latitude || $0.coordinate.longitude != address.coordinate.longitude})
         if filteredAddresses.count < maxElements {
@@ -108,4 +107,5 @@ extension Array where Element : Address {
         self = filteredAddresses as! [Element]
         return filteredAddresses
     }
+
 }

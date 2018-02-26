@@ -9,26 +9,26 @@
 import Foundation
 
 struct Constants {
-    private init(){}
+    private init() {}
     struct MapBox {
-        private init(){}
+        private init() {}
         static let url = URL(string: "mapbox://styles/mapbox/streets-v10")
         static let defaultZoom: Double = 16
     }
     struct Segue {
-        private init(){}
+        private init() {}
         static let searchAddress = "searchAddress"
     }
     struct CellIdentifier {
-        private init(){}
+        private init() {}
         static let searchAddressCell = "searchAddressCell"
     }
     struct Hero {
-        private init(){}
+        private init() {}
         static let searchBarId = "searchBar"
     }
     struct Trads {
-        private init(){}
+        private init() {}
         static let searchPlaceholder = "search_placeholder".localized
         static let searchResults = "search_results".localized
         static let searchHistory = "search_history".localized

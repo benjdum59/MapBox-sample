@@ -11,9 +11,9 @@ import Mapbox
 
 
 class MapBoxImplementation: MapProtocol{
-    
+
     var mapView: MGLMapView!
-    
+
     required init(view: UIView, delegate: Any? = nil) {
         mapView = MGLMapView(frame: view.bounds, styleURL: Constants.MapBox.url)
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -22,11 +22,12 @@ class MapBoxImplementation: MapProtocol{
         mapView.delegate = delegate as? MGLMapViewDelegate
         view.addSubview(mapView)
     }
-    
+
     func showLocation(location: CLLocationCoordinate2D) {
         mapView.setCenter(location, zoomLevel: Constants.MapBox.defaultZoom, animated: true)
         let pin = MGLPointAnnotation()
         pin.coordinate = location
         mapView.addAnnotation(pin)
     }
+
 }

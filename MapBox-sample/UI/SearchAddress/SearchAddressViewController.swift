@@ -15,17 +15,17 @@ import Hero
 class SearchAddressViewController: UIViewController {
     @IBOutlet weak var addressSearchBar: UISearchBar!
     @IBOutlet weak var addressTableView: UITableView!
-    
+
     var initialText: String = ""
-    
+
     fileprivate var addresses: [Address] = []
     fileprivate var history: [Address] = []
 
     private let disposeBag = DisposeBag()
     private let throttleInterval = 1.0
-    
+
     weak var delegate: SearchAddressDelegate?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hero.isEnabled = true
@@ -53,12 +53,15 @@ class SearchAddressViewController: UIViewController {
             self.addressTableView.reloadData()
         }
     }
+    
 }
 
 extension SearchAddressViewController: UISearchBarDelegate {
+
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         dismiss(animated: true, completion: nil)
     }
+
 }
 
 extension SearchAddressViewController: UITableViewDataSource {
@@ -83,6 +86,7 @@ extension SearchAddressViewController: UITableViewDataSource {
 }
 
 extension SearchAddressViewController: UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let address = (indexPath.section == tableView.numberOfSections - 1) ? addresses[indexPath.row] : history[indexPath.row]
         delegate?.didSelectAddress(address: address)
@@ -90,4 +94,5 @@ extension SearchAddressViewController: UITableViewDelegate {
             dismiss(animated: true, completion: nil)
         }
     }
+
 }

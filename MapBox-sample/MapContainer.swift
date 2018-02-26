@@ -11,12 +11,13 @@ import CoreLocation
 
 class MapContainer {
     var map: MapProtocol
-    
+
     init(map: MapProtocol){
         self.map = map
     }
-    
+
     func showLocation(location: CLLocationCoordinate2D) {
         map.showLocation(location: location)
     }
+
 }

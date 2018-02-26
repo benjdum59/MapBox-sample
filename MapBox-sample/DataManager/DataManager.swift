@@ -10,12 +10,12 @@ import Foundation
 
 class DataManager {
     let addressBLL : AddressBLL
-    
-    init(){
+
+    init() {
         addressBLL = AddressBLL()
     }
     
-    init(storage: AddressStorageProtocol, service: AddressServiceProtocol){
+    init(storage: AddressStorageProtocol, service: AddressServiceProtocol) {
         addressBLL = AddressBLL(storage: storage, service: service)
     }
 }

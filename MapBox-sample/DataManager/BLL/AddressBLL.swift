@@ -12,7 +12,6 @@ import CoreLocation
 class AddressBLL {
     private let addressStorage: AddressStorageProtocol
     private let addressService: AddressServiceProtocol
-    
     init() {
         addressStorage = AddressHistoryStorage()
         addressService = AddressService()
@@ -23,13 +22,13 @@ class AddressBLL {
         addressService = service
     }
     
-    func searchAddress(string: String, completion:@escaping ([Address])->Void) {
+    func searchAddress(string: String, completion:@escaping ([Address]) -> Void) {
         addressService.searchAddresses(string: string) { (addresses) in
             completion(addresses)
         }
     }
     
-    func getAddress(coordinate:CLLocationCoordinate2D, completion:@escaping (Address?)->Void) {
+    func getAddress(coordinate:CLLocationCoordinate2D, completion:@escaping (Address?) -> Void) {
         addressService.getAddress(coordinate: coordinate) { (address) in
             guard let address = address else {
                 completion(nil)
@@ -41,13 +40,13 @@ class AddressBLL {
         }
     }
     
-    func getAddressHistory(completion: ([Address])->Void){
+    func getAddressHistory(completion: ([Address]) -> Void){
         addressStorage.getAddresses { (addresses) in
             completion(addresses)
         }
     }
     
-    func saveAddress(address: Address, completion:()->Void) {
+    func saveAddress(address: Address, completion:() -> Void) {
         addressStorage.getAddresses { (addresses) in
             var addresses = addresses
             addresses.add(address: address, maxElements: 2)

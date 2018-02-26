@@ -9,8 +9,7 @@
 import Foundation
 import CoreLocation
 
-class Coordinate: NSObject, NSCoding{
-    
+class Coordinate: NSObject, NSCoding {
     let latitude: Double
     let longitude: Double
     
@@ -43,5 +42,5 @@ class Coordinate: NSObject, NSCoding{
         return lhs.latitude == rhs.latitude
             && lhs.longitude == rhs.longitude
     }
-}
 
+}

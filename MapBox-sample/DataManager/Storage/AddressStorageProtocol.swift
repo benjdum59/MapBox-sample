@@ -9,7 +9,6 @@
 import Foundation
 
 protocol AddressStorageProtocol {
-    
-    func getAddresses(completion:([Address])->Void)
-    func saveAddresses(addresses: [Address], completion:()->Void)
+    func getAddresses(completion:([Address]) -> Void)
+    func saveAddresses(addresses: [Address], completion:() -> Void)
 }

@@ -9,11 +9,8 @@
 import Foundation
 
 class AddressHistoryMock: AddressStorageProtocol {
-    
     let address1 = Address(streetNumber: "fakeNumber1", streetName: "fakeName1", postalCode: "fakePostalCode1", town: "fakeTown1", printableAddress: "fakePrint1", coordinate: Coordinate(latitude: 0, longitude: 0))
     let address2 = Address(streetNumber: "fakeNumber2", streetName: "fakeName2", postalCode: "fakePostalCode2", town: "fakeTown2", printableAddress: "fakePrint2", coordinate: Coordinate(latitude: 0, longitude: 1))
-    
-    
     var getAddressesCalled = false
     var saveAddressesCalled = false
     

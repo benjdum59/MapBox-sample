@@ -31,7 +31,7 @@ class AddressTest: XCTestCase {
     
     func testInitAddressFromMapBox() {
         struct SerializeKeys {
-            private init(){}
+            private init() {}
             static let streetNumber = "subThoroughfare"
             static let streetName = "street"
             static let postalCode = "postalCode"
