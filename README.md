@@ -58,6 +58,7 @@ Open xcworkspace file to run the application. If you want to add new pods, you c
 ### Step5
 - I don't know if pins have to be removed when another address is selected. So I decided to keep them (they were removed before this step)
 - For the map, I created a map container which is initialized with a MapProtocol. MapBoxImplementation implements this protocol
+- Add dependency injection for service and storage
 
 ### Step6
  - UT on utils and model
