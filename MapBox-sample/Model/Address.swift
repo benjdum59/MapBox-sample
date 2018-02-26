@@ -95,3 +95,16 @@ extension Address {
         }
     }
 }
+
+extension Array where Element : Address {
+    func add(address: Address, maxElements: Int)->[Address] {
+        var filteredAddresses: [Address] = self.filter({$0.coordinate.latitude != address.coordinate.latitude || $0.coordinate.longitude != address.coordinate.longitude})
+        if filteredAddresses.count < maxElements {
+            filteredAddresses.append(address)
+        } else {
+            filteredAddresses.remove(at: 0)
+            filteredAddresses.append(address)
+        }
+        return filteredAddresses
+    }
+}
