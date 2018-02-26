@@ -1,0 +1,11 @@
+language: swift
+
+osx_image: xcode9.2
+
+script:
+    - fastlane test
+
+before_install:
+  - brew update
+  - sudo gem install fastlane
+
