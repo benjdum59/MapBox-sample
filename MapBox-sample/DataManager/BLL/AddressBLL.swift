@@ -18,6 +18,11 @@ class AddressBLL {
         addressService = AddressService()
     }
     
+    init(storage: AddressStorageProtocol, service: AddressServiceProtocol) {
+        addressStorage = storage
+        addressService = service
+    }
+    
     func searchAddress(string: String, completion:@escaping ([Address])->Void) {
         addressService.searchAddresses(string: string) { (addresses) in
             completion(addresses)
@@ -44,7 +49,9 @@ class AddressBLL {
     
     func saveAddress(address: Address, completion:()->Void) {
         addressStorage.getAddresses { (addresses) in
-            addressStorage.saveAddresses(addresses: addresses.add(address: address, maxElements: 2), completion: {
+            var addresses = addresses
+            addresses.add(address: address, maxElements: 2)
+            addressStorage.saveAddresses(addresses: addresses, completion: {
                 completion()
             })
         }

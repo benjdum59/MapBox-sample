@@ -49,8 +49,18 @@
 		09DF39BA204169A10058B30B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09DF39B8204169A10058B30B /* Main.storyboard */; };
 		09DF39BC204169A10058B30B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09DF39BB204169A10058B30B /* Assets.xcassets */; };
 		09DF39BF204169A10058B30B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09DF39BD204169A10058B30B /* LaunchScreen.storyboard */; };
-		09DF39CA204169A10058B30B /* MapBox_sampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DF39C9204169A10058B30B /* MapBox_sampleTests.swift */; };
-		09DF39D5204169A10058B30B /* MapBox_sampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DF39D4204169A10058B30B /* MapBox_sampleUITests.swift */; };
+		09E9CCE72044035E00162210 /* AddressHistoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9CCE52044022F00162210 /* AddressHistoryMock.swift */; };
+		09E9CCE82044035F00162210 /* AddressHistoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9CCE52044022F00162210 /* AddressHistoryMock.swift */; };
+		09E9CCEE2044061700162210 /* BLLTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9CCED2044061700162210 /* BLLTest.swift */; };
+		09E9CCF0204411F700162210 /* AddressServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9CCEF204411F700162210 /* AddressServiceMock.swift */; };
+		09E9CCF1204411F700162210 /* AddressServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9CCEF204411F700162210 /* AddressServiceMock.swift */; };
+		09E9CCF620441E5400162210 /* MapViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9CCF520441E5400162210 /* MapViewControllerTestCase.swift */; };
+		09E9CCF920441F3500162210 /* File.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09E9CCF820441F3500162210 /* File.strings */; };
+		09E9CCFA20441F3500162210 /* File.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09E9CCF820441F3500162210 /* File.strings */; };
+		09E9CCFB20441F3500162210 /* File.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09E9CCF820441F3500162210 /* File.strings */; };
+		09E9CCFD2044203500162210 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9CCFC2044203500162210 /* String+Utils.swift */; };
+		09E9CCFE2044203500162210 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9CCFC2044203500162210 /* String+Utils.swift */; };
+		09E9CCFF2044203500162210 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9CCFC2044203500162210 /* String+Utils.swift */; };
 		09F28DC220419E4E0040DBF6 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F28DC120419E4E0040DBF6 /* Address.swift */; };
 		09F28DC62041B44E0040DBF6 /* SearchAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F28DC52041B44E0040DBF6 /* SearchAddressTableViewCell.swift */; };
 		09F28DC72041B44E0040DBF6 /* SearchAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F28DC52041B44E0040DBF6 /* SearchAddressTableViewCell.swift */; };
@@ -107,11 +117,15 @@
 		09DF39BE204169A10058B30B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09DF39C0204169A10058B30B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09DF39C5204169A10058B30B /* MapBox-sampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MapBox-sampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		09DF39C9204169A10058B30B /* MapBox_sampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBox_sampleTests.swift; sourceTree = "<group>"; };
 		09DF39CB204169A10058B30B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09DF39D0204169A10058B30B /* MapBox-sampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MapBox-sampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		09DF39D4204169A10058B30B /* MapBox_sampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBox_sampleUITests.swift; sourceTree = "<group>"; };
 		09DF39D6204169A20058B30B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09E9CCE52044022F00162210 /* AddressHistoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressHistoryMock.swift; sourceTree = "<group>"; };
+		09E9CCED2044061700162210 /* BLLTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLLTest.swift; sourceTree = "<group>"; };
+		09E9CCEF204411F700162210 /* AddressServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressServiceMock.swift; sourceTree = "<group>"; };
+		09E9CCF520441E5400162210 /* MapViewControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerTestCase.swift; sourceTree = "<group>"; };
+		09E9CCF820441F3500162210 /* File.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = File.strings; sourceTree = "<group>"; };
+		09E9CCFC2044203500162210 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		09F28DC120419E4E0040DBF6 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		09F28DC52041B44E0040DBF6 /* SearchAddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressTableViewCell.swift; sourceTree = "<group>"; };
 		09F28DC92041B6FB0040DBF6 /* SearchAddressDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +202,7 @@
 			children = (
 				09C9D56E2042B4CE004DBC07 /* AddressHistoryStorage.swift */,
 				0983AF4B20432E35009578CE /* AddressStorageProtocol.swift */,
+				09E9CCE52044022F00162210 /* AddressHistoryMock.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -248,6 +263,7 @@
 				09C9D57C2042EC44004DBC07 /* MapContainer.swift */,
 				09C9D57E2042ECD6004DBC07 /* MapBoxImplementation.swift */,
 				09C9D5822042ED0D004DBC07 /* MapProtocol.swift */,
+				09E9CCF820441F3500162210 /* File.strings */,
 			);
 			path = "MapBox-sample";
 			sourceTree = "<group>";
@@ -255,9 +271,9 @@
 		09DF39C8204169A10058B30B /* MapBox-sampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				09DF39C9204169A10058B30B /* MapBox_sampleTests.swift */,
+				09E9CCF32044192500162210 /* BLL */,
+				09E9CCF22044190F00162210 /* Model */,
 				09DF39CB204169A10058B30B /* Info.plist */,
-				0983AF5720433E3A009578CE /* AddressTest.swift */,
 			);
 			path = "MapBox-sampleTests";
 			sourceTree = "<group>";
@@ -265,10 +281,26 @@
 		09DF39D3204169A10058B30B /* MapBox-sampleUITests */ = {
 			isa = PBXGroup;
 			children = (
-				09DF39D4204169A10058B30B /* MapBox_sampleUITests.swift */,
 				09DF39D6204169A20058B30B /* Info.plist */,
+				09E9CCF520441E5400162210 /* MapViewControllerTestCase.swift */,
 			);
 			path = "MapBox-sampleUITests";
+			sourceTree = "<group>";
+		};
+		09E9CCF22044190F00162210 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0983AF5720433E3A009578CE /* AddressTest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		09E9CCF32044192500162210 /* BLL */ = {
+			isa = PBXGroup;
+			children = (
+				09E9CCED2044061700162210 /* BLLTest.swift */,
+			);
+			path = BLL;
 			sourceTree = "<group>";
 		};
 		09F28DC32041B4170040DBF6 /* Map */ = {
@@ -294,6 +326,7 @@
 			children = (
 				09F28DCE2041FD5D0040DBF6 /* AddressService.swift */,
 				0983AF4D20432F26009578CE /* AddressServiceProtocol.swift */,
+				09E9CCEF204411F700162210 /* AddressServiceMock.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -302,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				09F28DD320420FD50040DBF6 /* UISearchBar+Utils.swift */,
+				09E9CCFC2044203500162210 /* String+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -446,6 +480,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09E9CCF920441F3500162210 /* File.strings in Resources */,
 				09DF39BF204169A10058B30B /* LaunchScreen.storyboard in Resources */,
 				09DF39BC204169A10058B30B /* Assets.xcassets in Resources */,
 				09DF39BA204169A10058B30B /* Main.storyboard in Resources */,
@@ -456,6 +491,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09E9CCFA20441F3500162210 /* File.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +499,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09E9CCFB20441F3500162210 /* File.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,9 +512,22 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MapBox-sampleUITests/Pods-MapBox-sampleUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM",
+				"${BUILT_PRODUCTS_DIR}/MapboxGeocoder.swift/MapboxGeocoder.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Mapbox.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxGeocoder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -533,9 +583,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MapBox-sampleTests/Pods-MapBox-sampleTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/TXSwizzling/TXSwizzling.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TXSwizzling.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -645,6 +698,7 @@
 				09C9D57D2042EC45004DBC07 /* MapContainer.swift in Sources */,
 				09F28DCF2041FD5D0040DBF6 /* AddressService.swift in Sources */,
 				09F28DC62041B44E0040DBF6 /* SearchAddressTableViewCell.swift in Sources */,
+				09E9CCFD2044203500162210 /* String+Utils.swift in Sources */,
 				09F28DCA2041B6FB0040DBF6 /* SearchAddressDelegate.swift in Sources */,
 				0983AF4C20432E35009578CE /* AddressStorageProtocol.swift in Sources */,
 				0983AF4E20432F26009578CE /* AddressServiceProtocol.swift in Sources */,
@@ -658,18 +712,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09E9CCFE2044203500162210 /* String+Utils.swift in Sources */,
 				09F28DC72041B44E0040DBF6 /* SearchAddressTableViewCell.swift in Sources */,
-				09DF39CA204169A10058B30B /* MapBox_sampleTests.swift in Sources */,
 				09AA25DC204192AB00565CED /* SearchAddressViewController.swift in Sources */,
 				09C9D57A2042B916004DBC07 /* AddressBLL.swift in Sources */,
 				09C9D5802042ECD6004DBC07 /* MapBoxImplementation.swift in Sources */,
 				09C9D5702042B4CE004DBC07 /* AddressHistoryStorage.swift in Sources */,
+				09E9CCEE2044061700162210 /* BLLTest.swift in Sources */,
 				0983AF4F20432F26009578CE /* AddressServiceProtocol.swift in Sources */,
 				09C9D5842042ED0D004DBC07 /* MapProtocol.swift in Sources */,
 				0983AF5520433C83009578CE /* AppDelegate.swift in Sources */,
+				09E9CCE72044035E00162210 /* AddressHistoryMock.swift in Sources */,
 				092E858D20416D8500E29F11 /* Constants.swift in Sources */,
 				0983AF5320433C62009578CE /* Address.swift in Sources */,
 				092E85942041749B00E29F11 /* Coordinate.swift in Sources */,
+				09E9CCF0204411F700162210 /* AddressServiceMock.swift in Sources */,
 				0983AF5120432F2B009578CE /* AddressStorageProtocol.swift in Sources */,
 				09F28DD02041FD5D0040DBF6 /* AddressService.swift in Sources */,
 				09C9D5752042B8DD004DBC07 /* DataManager.swift in Sources */,
@@ -683,9 +740,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				09F28DC82041B44E0040DBF6 /* SearchAddressTableViewCell.swift in Sources */,
-				09DF39D5204169A10058B30B /* MapBox_sampleUITests.swift in Sources */,
 				09AA25DD204192AB00565CED /* SearchAddressViewController.swift in Sources */,
 				09C9D57B2042B916004DBC07 /* AddressBLL.swift in Sources */,
+				09E9CCF620441E5400162210 /* MapViewControllerTestCase.swift in Sources */,
 				09C9D5812042ECD6004DBC07 /* MapBoxImplementation.swift in Sources */,
 				09C9D5712042B4CE004DBC07 /* AddressHistoryStorage.swift in Sources */,
 				0983AF5020432F26009578CE /* AddressServiceProtocol.swift in Sources */,
@@ -694,10 +751,13 @@
 				092E858E20416D8500E29F11 /* Constants.swift in Sources */,
 				0983AF5420433C63009578CE /* Address.swift in Sources */,
 				092E85952041749B00E29F11 /* Coordinate.swift in Sources */,
+				09E9CCFF2044203500162210 /* String+Utils.swift in Sources */,
 				0983AF5220432F2C009578CE /* AddressStorageProtocol.swift in Sources */,
 				09F28DD12041FD5D0040DBF6 /* AddressService.swift in Sources */,
 				09C9D5762042B8DD004DBC07 /* DataManager.swift in Sources */,
+				09E9CCF1204411F700162210 /* AddressServiceMock.swift in Sources */,
 				09F28DCC2041B6FB0040DBF6 /* SearchAddressDelegate.swift in Sources */,
+				09E9CCE82044035F00162210 /* AddressHistoryMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -915,7 +975,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1696A57DEDB39284FD278CBC /* Pods-MapBox-sampleUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VGW4QWQ3R5;
 				INFOPLIST_FILE = "MapBox-sampleUITests/Info.plist";
@@ -932,7 +992,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3F5881023A903F99D7044FA8 /* Pods-MapBox-sampleUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VGW4QWQ3R5;
 				INFOPLIST_FILE = "MapBox-sampleUITests/Info.plist";

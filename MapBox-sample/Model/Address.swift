@@ -97,7 +97,7 @@ extension Address {
 }
 
 extension Array where Element : Address {
-    func add(address: Address, maxElements: Int)->[Address] {
+    @discardableResult mutating func add(address: Address, maxElements: Int) -> [Address] {
         var filteredAddresses: [Address] = self.filter({$0.coordinate.latitude != address.coordinate.latitude || $0.coordinate.longitude != address.coordinate.longitude})
         if filteredAddresses.count < maxElements {
             filteredAddresses.append(address)
@@ -105,6 +105,7 @@ extension Array where Element : Address {
             filteredAddresses.remove(at: 0)
             filteredAddresses.append(address)
         }
+        self = filteredAddresses as! [Element]
         return filteredAddresses
     }
 }

@@ -1,14 +1,14 @@
 //
-//  MapBox_sampleUITests.swift
+//  MapViewControllerTestCase.swift
 //  MapBox-sampleUITests
 //
-//  Created by Benjamin DUMONT on 24/02/2018.
+//  Created by Benjamin DUMONT on 26/02/2018.
 //  Copyright © 2018 Benjamin DUMONT. All rights reserved.
 //
 
 import XCTest
 
-class MapBox_sampleUITests: XCTestCase {
+class MapViewControllerTestCase: XCTestCase {
         
     override func setUp() {
         super.setUp()
@@ -28,9 +28,9 @@ class MapBox_sampleUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testView() {
+        
+
     }
     
 }

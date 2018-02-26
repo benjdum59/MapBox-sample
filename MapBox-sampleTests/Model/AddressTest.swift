@@ -69,6 +69,37 @@ class AddressTest: XCTestCase {
 
     }
     
+    func testAddElementInAddressArray(){
+        var array: [Address] = []
+        array.add(address: address, maxElements: 2)
+        XCTAssertTrue(array.count == 1, "Array should have only 1 address")
+        XCTAssertTrue(array.first == address, "Array should have the address named \"address\"")
+        
+        array.add(address: address, maxElements: 2)
+        XCTAssertTrue(array.count == 1, "Array should have only 1 address since we added an address already contained in the array")
+        
+        let address2 = Address(streetNumber: streetNumber, streetName: streetName, postalCode: postalCode, town: town, printableAddress: printableAddress, coordinate: Coordinate(latitude: 0, longitude: 1))
+        array.add(address: address2, maxElements: 2)
+        XCTAssertTrue(array.count == 2, "Array should have 2 addresses")
+        XCTAssertTrue(array.first == address, "1st element of array should be \"address\"")
+        XCTAssertTrue(array.last == address2, "Last element of array should be \"address2\"")
+        
+        let address3 = Address(streetNumber: streetNumber, streetName: streetName, postalCode: postalCode, town: town, printableAddress: printableAddress, coordinate: Coordinate(latitude: 1, longitude: 1))
+        array.add(address: address3, maxElements: 2)
+        XCTAssertTrue(array.count == 2, "Array should have 2 addresses")
+        XCTAssertTrue(array.first == address2, "1st element of array should be \"address2\"")
+        XCTAssertTrue(array.last == address3, "Last element of array should be \"address3\"")
+
+
+
+//        XCTAssertTrue(array.count == 2, "Array should have 2 addresses")
+
+
+
+        
+
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
