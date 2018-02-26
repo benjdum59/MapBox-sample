@@ -1,5 +1,5 @@
 //
-//  MapViewControllerTestCase.swift
+//  SearchAddressTestCase.swift
 //  MapBox-sampleUITests
 //
 //  Created by Benjamin DUMONT on 26/02/2018.
@@ -8,7 +8,9 @@
 
 import XCTest
 
-class MapViewControllerTestCase: XCTestCase {
+class SearchAddressTestCase: XCTestCase {
+    
+    let app = XCUIApplication()
         
     override func setUp() {
         super.setUp()
@@ -21,6 +23,9 @@ class MapViewControllerTestCase: XCTestCase {
         XCUIApplication().launch()
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        
+        XCTAssertTrue(waitForObjectExists(app.searchFields.element))
+
     }
     
     override func tearDown() {
@@ -29,10 +34,14 @@ class MapViewControllerTestCase: XCTestCase {
     }
     
     func testView() {
-        
-        let app = XCUIApplication()        
-        XCTAssertTrue(waitForObjectExists(app.searchFields.element))
-        XCTAssertTrue(app.images.matching(identifier: "pin").element.exists)
+        app.searchFields.element.tap()
+        XCTAssertTrue(waitForObjectExists(app.buttons["Cancel"]))
+        let initialCellNumber = app.tables.element.cells.count
+        XCTAssertTrue(initialCellNumber <= 2, "TableView should have less than 2 cells (the 2 cells are for history)")
+        app.searchFields.element.typeText("a")
+        wait(2, reason: "Call the API")
+        XCTAssertTrue(app.tables.element.cells.count > initialCellNumber, "TableView should have more cells")
+        app.tables.element.cells.firstMatch.tap()
+        MapViewControllerTestCase().testView()
     }
-    
 }

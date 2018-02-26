@@ -61,6 +61,9 @@
 		09E9CD012044330300162210 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09E9CD002044330300162210 /* Localizable.strings */; };
 		09E9CD022044330300162210 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09E9CD002044330300162210 /* Localizable.strings */; };
 		09E9CD032044330300162210 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09E9CD002044330300162210 /* Localizable.strings */; };
+		09E9CD07204438A400162210 /* XCTestCase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9CD05204438A400162210 /* XCTestCase+Utils.swift */; };
+		09E9CD08204438A400162210 /* XCTestCase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9CD05204438A400162210 /* XCTestCase+Utils.swift */; };
+		09E9CD0A20443CAA00162210 /* SearchAddressTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E9CD0920443CAA00162210 /* SearchAddressTestCase.swift */; };
 		09F28DC220419E4E0040DBF6 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F28DC120419E4E0040DBF6 /* Address.swift */; };
 		09F28DC62041B44E0040DBF6 /* SearchAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F28DC52041B44E0040DBF6 /* SearchAddressTableViewCell.swift */; };
 		09F28DC72041B44E0040DBF6 /* SearchAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F28DC52041B44E0040DBF6 /* SearchAddressTableViewCell.swift */; };
@@ -126,6 +129,8 @@
 		09E9CCF520441E5400162210 /* MapViewControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerTestCase.swift; sourceTree = "<group>"; };
 		09E9CCFC2044203500162210 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		09E9CD002044330300162210 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		09E9CD05204438A400162210 /* XCTestCase+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Utils.swift"; sourceTree = "<group>"; };
+		09E9CD0920443CAA00162210 /* SearchAddressTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressTestCase.swift; sourceTree = "<group>"; };
 		09F28DC120419E4E0040DBF6 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		09F28DC52041B44E0040DBF6 /* SearchAddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressTableViewCell.swift; sourceTree = "<group>"; };
 		09F28DC92041B6FB0040DBF6 /* SearchAddressDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressDelegate.swift; sourceTree = "<group>"; };
@@ -281,8 +286,10 @@
 		09DF39D3204169A10058B30B /* MapBox-sampleUITests */ = {
 			isa = PBXGroup;
 			children = (
+				09E9CD042044388A00162210 /* Helpers */,
 				09DF39D6204169A20058B30B /* Info.plist */,
 				09E9CCF520441E5400162210 /* MapViewControllerTestCase.swift */,
+				09E9CD0920443CAA00162210 /* SearchAddressTestCase.swift */,
 			);
 			path = "MapBox-sampleUITests";
 			sourceTree = "<group>";
@@ -301,6 +308,14 @@
 				09E9CCED2044061700162210 /* BLLTest.swift */,
 			);
 			path = BLL;
+			sourceTree = "<group>";
+		};
+		09E9CD042044388A00162210 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				09E9CD05204438A400162210 /* XCTestCase+Utils.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		09F28DC32041B4170040DBF6 /* Map */ = {
@@ -728,6 +743,7 @@
 				092E85942041749B00E29F11 /* Coordinate.swift in Sources */,
 				09E9CCF0204411F700162210 /* AddressServiceMock.swift in Sources */,
 				0983AF5120432F2B009578CE /* AddressStorageProtocol.swift in Sources */,
+				09E9CD07204438A400162210 /* XCTestCase+Utils.swift in Sources */,
 				09F28DD02041FD5D0040DBF6 /* AddressService.swift in Sources */,
 				09C9D5752042B8DD004DBC07 /* DataManager.swift in Sources */,
 				0983AF5820433E3A009578CE /* AddressTest.swift in Sources */,
@@ -744,6 +760,7 @@
 				09C9D57B2042B916004DBC07 /* AddressBLL.swift in Sources */,
 				09E9CCF620441E5400162210 /* MapViewControllerTestCase.swift in Sources */,
 				09C9D5812042ECD6004DBC07 /* MapBoxImplementation.swift in Sources */,
+				09E9CD08204438A400162210 /* XCTestCase+Utils.swift in Sources */,
 				09C9D5712042B4CE004DBC07 /* AddressHistoryStorage.swift in Sources */,
 				0983AF5020432F26009578CE /* AddressServiceProtocol.swift in Sources */,
 				09C9D5852042ED0D004DBC07 /* MapProtocol.swift in Sources */,
@@ -754,6 +771,7 @@
 				09E9CCFF2044203500162210 /* String+Utils.swift in Sources */,
 				0983AF5220432F2C009578CE /* AddressStorageProtocol.swift in Sources */,
 				09F28DD12041FD5D0040DBF6 /* AddressService.swift in Sources */,
+				09E9CD0A20443CAA00162210 /* SearchAddressTestCase.swift in Sources */,
 				09C9D5762042B8DD004DBC07 /* DataManager.swift in Sources */,
 				09E9CCF1204411F700162210 /* AddressServiceMock.swift in Sources */,
 				09F28DCC2041B6FB0040DBF6 /* SearchAddressDelegate.swift in Sources */,
