@@ -9,3 +9,6 @@ before_install:
   - brew update
   - sudo gem install fastlane
 
+branches:
+  only:
+  - develop
