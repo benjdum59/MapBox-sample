@@ -44,6 +44,30 @@ class MapViewController: UIViewController {
         mapContainer?.showLocation(location: CLLocationCoordinate2D(latitude: address.coordinate.latitude, longitude: address.coordinate.longitude))
     }
     
+    fileprivate func presentAlert(){
+        let alert = UIAlertController(title: Constants.Trads.alertTitle, message: Constants.Trads.alertMessage, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: Constants.Trads.ok, style: .default) { (action) in
+            self.configureLocation()
+        }
+        let settingsAction = UIAlertAction(title: Constants.Trads.alertSettings, style: .default) { (_) -> Void in
+            guard let settingsUrl = URL(string: UIApplicationOpenSettingsURLString) else {
+                return
+            }
+            if UIApplication.shared.canOpenURL(settingsUrl) {
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                    })
+                } else {
+                    UIApplication.shared.openURL(settingsUrl)
+                    self.presentAlert()
+                }
+            }
+        }
+        alert.addAction(settingsAction)
+        alert.addAction(alertAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constants.Segue.searchAddress {
             let destVC = segue.destination as! SearchAddressViewController
@@ -58,6 +82,10 @@ extension MapViewController: CLLocationManagerDelegate {
         let location = locations.last! as CLLocation
         mapContainer?.showLocation(location: location.coordinate)
         manager.stopUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        presentAlert()
     }
 }
 

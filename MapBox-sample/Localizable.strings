@@ -9,3 +9,7 @@
 "search_placeholder" = "Search for an address";
 "search_results" = "Search results";
 "search_history" = "History";
+"alert_title" = "Error";
+"alert_message" = "This application needs that you active localisation service for this app.";
+"ok" = "OK";
+"alert_settings" = "Settings";

@@ -58,3 +58,12 @@ Open xcworkspace file to run the application. If you want to add new pods, you c
 ### Step5
 - I don't know if pins have to be removed when another address is selected. So I decided to keep them (they were removed before this step)
 - For the map, I created a map container which is initialized with a MapProtocol. MapBoxImplementation implements this protocol
+
+### Step6
+ - UT on utils and model
+ - UT on BLL with mocking service and storage. The aim is to check that methods in mocked service and storage are called in BLL
+ - UIT that checks :
+	 - We are on MapViewController
+	 - We are on SearchAddressViewController with no search result (searchBar textfield is empty)
+	 - Checks the tableView when we have results (writing "a" in the searchbar should always have results)
+	 - Minor fixes
