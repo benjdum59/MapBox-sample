@@ -16,5 +16,6 @@ platform :ios do
   desc "Description of what the lane does"
   lane :test do
     scan
+    slather
   end
 end

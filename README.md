@@ -71,3 +71,6 @@ Open xcworkspace file to run the application. If you want to add new pods, you c
 	 - We are on SearchAddressViewController with no search result (searchBar textfield is empty)
 	 - Checks the tableView when we have results (writing "a" in the searchbar should always have results)
 	 - Minor fixes
+ - Using Fastlane (only for tests)
+ - Using Travis for continuous integartion (link at the top of this README)
+ - Using Codacy for static code analysis (link at the top of this README)

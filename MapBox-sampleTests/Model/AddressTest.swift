@@ -29,6 +29,15 @@ class AddressTest: XCTestCase {
         super.tearDown()
     }
     
+    func testInit(){
+        XCTAssertTrue(address.streetName == streetName)
+        XCTAssertTrue(address.streetNumber == streetNumber)
+        XCTAssertTrue(address.postalCode == postalCode)
+        XCTAssertTrue(address.town == town)
+        XCTAssertTrue(address.printableAddress == printableAddress)
+        XCTAssertTrue(address.coordinate == coordinate)
+    }
+    
     func testInitAddressFromMapBox() {
         struct SerializeKeys {
             private init() {}
@@ -66,6 +75,8 @@ class AddressTest: XCTestCase {
     func testFormattedAddress(){
         XCTAssertTrue(address.formattedAddress == streetNumber + ", " + streetName + ", " + postalCode + ", " + town)
         XCTAssertFalse(address.formattedAddress == streetNumber + ", " + streetName + ", " + postalCode)
+        let emptyAddress = Address(streetNumber: nil, streetName: nil, postalCode: nil, town: nil, printableAddress: "emptyAddressPrintable", coordinate: Coordinate(latitude: 0, longitude: 0))
+        XCTAssertTrue(emptyAddress.formattedAddress == "emptyAddressPrintable")
 
     }
     

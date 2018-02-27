@@ -8,6 +8,7 @@ script:
 before_install:
   - brew update
   - sudo gem install fastlane
+  - sudo gem install slather
 
 branches:
   only:

@@ -25,6 +25,7 @@
 		0983AF5520433C83009578CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DF39B4204169A10058B30B /* AppDelegate.swift */; };
 		0983AF5620433C84009578CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DF39B4204169A10058B30B /* AppDelegate.swift */; };
 		0983AF5820433E3A009578CE /* AddressTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0983AF5720433E3A009578CE /* AddressTest.swift */; };
+		098F267420454A75003A40A0 /* CoordinateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098F267320454A75003A40A0 /* CoordinateTest.swift */; };
 		09AA25DB204192AB00565CED /* SearchAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA25DA204192AB00565CED /* SearchAddressViewController.swift */; };
 		09AA25DC204192AB00565CED /* SearchAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA25DA204192AB00565CED /* SearchAddressViewController.swift */; };
 		09AA25DD204192AB00565CED /* SearchAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA25DA204192AB00565CED /* SearchAddressViewController.swift */; };
@@ -105,6 +106,7 @@
 		0983AF4B20432E35009578CE /* AddressStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressStorageProtocol.swift; sourceTree = "<group>"; };
 		0983AF4D20432F26009578CE /* AddressServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressServiceProtocol.swift; sourceTree = "<group>"; };
 		0983AF5720433E3A009578CE /* AddressTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTest.swift; sourceTree = "<group>"; };
+		098F267320454A75003A40A0 /* CoordinateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateTest.swift; sourceTree = "<group>"; };
 		09AA25DA204192AB00565CED /* SearchAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressViewController.swift; sourceTree = "<group>"; };
 		09C9D56E2042B4CE004DBC07 /* AddressHistoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressHistoryStorage.swift; sourceTree = "<group>"; };
 		09C9D5732042B8DD004DBC07 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				0983AF5720433E3A009578CE /* AddressTest.swift */,
+				098F267320454A75003A40A0 /* CoordinateTest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -740,6 +743,7 @@
 				09E9CCE72044035E00162210 /* AddressHistoryMock.swift in Sources */,
 				092E858D20416D8500E29F11 /* Constants.swift in Sources */,
 				0983AF5320433C62009578CE /* Address.swift in Sources */,
+				098F267420454A75003A40A0 /* CoordinateTest.swift in Sources */,
 				092E85942041749B00E29F11 /* Coordinate.swift in Sources */,
 				09E9CCF0204411F700162210 /* AddressServiceMock.swift in Sources */,
 				0983AF5120432F2B009578CE /* AddressStorageProtocol.swift in Sources */,

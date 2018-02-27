@@ -1,0 +1,8 @@
+coverage_service: html
+xcodeproj: MapBox-sample.xcodeproj
+workspace: MapBox-sample.xcworkspace
+scheme: MapBox-sample
+source_directory: .
+output_directory: .fastlane/test_output/coverage
+ignore:
+  - Pods/*
