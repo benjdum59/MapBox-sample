@@ -13,3 +13,6 @@ before_install:
 branches:
   only:
   - develop
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -t f546cf5d-3bbc-4601-a259-9ccc5f2e9e11
