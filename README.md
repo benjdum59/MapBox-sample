@@ -79,3 +79,20 @@ Open xcworkspace file to run the application. If you want to add new pods, you c
  - Using Slather for code coverage. To see results, please run:
     `fastlane test  && open .fastlane/test_output/coverage/index.html`
  - Using codecov for code coverage too (link at the top of this README)
+
+## Results
+### Preview
+![Preview](https://raw.githubusercontent.com/benjdum59/MapBox-sample/develop/pictures/preview.gif "Preview")
+
+### Reports
+#### Build status
+[![Build Status](https://travis-ci.org/benjdum59/MapBox-sample.svg?branch=develop)](https://travis-ci.org/benjdum59/MapBox-sample)
+
+#### Code coverage
+[![codecov](https://codecov.io/gh/benjdum59/MapBox-sample/branch/develop/graph/badge.svg)](https://codecov.io/gh/benjdum59/MapBox-sample)
+
+#### Static code analysis
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c886d07eec7d4461a107dcadb050d257)](https://www.codacy.com/app/benjdum59/MapBox-sample?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=benjdum59/MapBox-sample&amp;utm_campaign=Badge_Grade)
+
+#### Memory Leaks
+![Memory Leaks](https://raw.githubusercontent.com/benjdum59/MapBox-sample/develop/pictures/memoryleak.png "Memory Leaks")
