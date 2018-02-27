@@ -1,0 +1,4 @@
+ignore:
+  - Pods
+  - MapBox-sampleTests
+  - MapBox-sampleUITests
