@@ -13,7 +13,7 @@ class AddressHistoryMock: AddressStorageProtocol {
     let address2 = Address(streetNumber: "fakeNumber2", streetName: "fakeName2", postalCode: "fakePostalCode2", town: "fakeTown2", printableAddress: "fakePrint2", coordinate: Coordinate(latitude: 0, longitude: 1))
     var getAddressesCalled = false
     var saveAddressesCalled = false
-    
+
     func getAddresses(completion: ([Address]) -> Void) {
         getAddressesCalled = true
         completion([address1, address2])

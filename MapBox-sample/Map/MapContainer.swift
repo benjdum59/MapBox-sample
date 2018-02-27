@@ -12,7 +12,7 @@ import CoreLocation
 class MapContainer {
     var map: MapProtocol
 
-    init(map: MapProtocol){
+    init(map: MapProtocol) {
         self.map = map
     }
 

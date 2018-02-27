@@ -14,7 +14,7 @@ class DataManager {
     init() {
         addressBLL = AddressBLL()
     }
-    
+
     init(storage: AddressStorageProtocol, service: AddressServiceProtocol) {
         addressBLL = AddressBLL(storage: storage, service: service)
     }

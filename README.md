@@ -1,6 +1,8 @@
 # MapBox-sample
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c886d07eec7d4461a107dcadb050d257)](https://www.codacy.com/app/benjdum59/MapBox-sample?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=benjdum59/MapBox-sample&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.org/benjdum59/MapBox-sample.svg?branch=develop)](https://travis-ci.org/benjdum59/MapBox-sample)
+[![codecov](https://codecov.io/gh/benjdum59/MapBox-sample/branch/develop/graph/badge.svg)](https://codecov.io/gh/benjdum59/MapBox-sample)
+
 
 ## Subject
 ### Introduction
@@ -74,3 +76,6 @@ Open xcworkspace file to run the application. If you want to add new pods, you c
  - Using Fastlane (only for tests)
  - Using Travis for continuous integartion (link at the top of this README)
  - Using Codacy for static code analysis (link at the top of this README)
+ - Using Slather for code coverage. To see results, please run:
+    `fastlane test  && open .fastlane/test_output/coverage/index.html`
+ - Using codecov for code coverage too (link at the top of this README)

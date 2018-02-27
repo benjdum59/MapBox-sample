@@ -10,7 +10,7 @@ import UIKit
 import Mapbox
 
 
-class MapBoxImplementation: MapProtocol{
+class MapBoxImplementation: MapProtocol {
 
     var mapView: MGLMapView!
 

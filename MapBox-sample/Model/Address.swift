@@ -16,7 +16,7 @@ class Address: NSObject, NSCoding {
     var town: String?
     var printableAddress: String?
     var coordinate: Coordinate
-    
+
     private struct SerializationKeys {
         static let streetNumber = "streetNumber"
         static let streetName = "streetName"
@@ -83,6 +83,7 @@ class Address: NSObject, NSCoding {
             && lhs.town == rhs.town
             && lhs.coordinate == rhs.coordinate
     }
+
 }
 
 extension Address {

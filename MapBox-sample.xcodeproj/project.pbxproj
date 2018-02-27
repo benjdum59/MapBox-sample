@@ -204,12 +204,46 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		098F267520456934003A40A0 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				098F26772045694D003A40A0 /* Service */,
+				098F26762045693D003A40A0 /* Storage */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		098F26762045693D003A40A0 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				09E9CCE52044022F00162210 /* AddressHistoryMock.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		098F26772045694D003A40A0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				09E9CCEF204411F700162210 /* AddressServiceMock.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		098F267820456971003A40A0 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				09C9D57C2042EC44004DBC07 /* MapContainer.swift */,
+				09C9D57E2042ECD6004DBC07 /* MapBoxImplementation.swift */,
+				09C9D5822042ED0D004DBC07 /* MapProtocol.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		09C9D56D2042B4A3004DBC07 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
 				09C9D56E2042B4CE004DBC07 /* AddressHistoryStorage.swift */,
 				0983AF4B20432E35009578CE /* AddressStorageProtocol.swift */,
-				09E9CCE52044022F00162210 /* AddressHistoryMock.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -258,18 +292,16 @@
 		09DF39B3204169A10058B30B /* MapBox-sample */ = {
 			isa = PBXGroup;
 			children = (
-				09C9D5722042B824004DBC07 /* DataManager */,
-				09F28DD220420FB60040DBF6 /* Utils */,
-				092E85912041748300E29F11 /* Model */,
 				092E858A20416D1000E29F11 /* Conf */,
+				09C9D5722042B824004DBC07 /* DataManager */,
+				098F267820456971003A40A0 /* Map */,
+				092E85912041748300E29F11 /* Model */,
 				092E858920416CEC00E29F11 /* UI */,
+				09F28DD220420FB60040DBF6 /* Utils */,
 				09DF39B4204169A10058B30B /* AppDelegate.swift */,
 				09DF39BB204169A10058B30B /* Assets.xcassets */,
 				09DF39BD204169A10058B30B /* LaunchScreen.storyboard */,
 				09DF39C0204169A10058B30B /* Info.plist */,
-				09C9D57C2042EC44004DBC07 /* MapContainer.swift */,
-				09C9D57E2042ECD6004DBC07 /* MapBoxImplementation.swift */,
-				09C9D5822042ED0D004DBC07 /* MapProtocol.swift */,
 				09E9CD002044330300162210 /* Localizable.strings */,
 			);
 			path = "MapBox-sample";
@@ -278,6 +310,7 @@
 		09DF39C8204169A10058B30B /* MapBox-sampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				098F267520456934003A40A0 /* Mock */,
 				09E9CCF32044192500162210 /* BLL */,
 				09E9CCF22044190F00162210 /* Model */,
 				09DF39CB204169A10058B30B /* Info.plist */,
@@ -344,7 +377,6 @@
 			children = (
 				09F28DCE2041FD5D0040DBF6 /* AddressService.swift */,
 				0983AF4D20432F26009578CE /* AddressServiceProtocol.swift */,
-				09E9CCEF204411F700162210 /* AddressServiceMock.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";

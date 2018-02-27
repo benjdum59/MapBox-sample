@@ -12,7 +12,7 @@ final class AddressHistoryStorage: AddressStorageProtocol {
     private let keyStorage = "AddressHistoryStorage"
     private let userDefaults = UserDefaults.standard
 
-    func getAddresses(completion:([Address]) -> Void){
+    func getAddresses(completion:([Address]) -> Void) {
         guard let data = UserDefaults.standard.object(forKey: keyStorage) as? Data else {
             completion([])
             return

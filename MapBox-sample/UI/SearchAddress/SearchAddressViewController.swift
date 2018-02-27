@@ -41,13 +41,13 @@ class SearchAddressViewController: UIViewController {
             self.getAddresses()
         }).disposed(by: disposeBag)
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         addressSearchBar.becomeFirstResponder()
     }
     
-    private func getAddresses(){
+    private func getAddresses() {
         dataManager.addressBLL.searchAddress(string: self.addressSearchBar.text ?? "") { (addresses) in
             self.addresses = addresses
             self.addressTableView.reloadData()
@@ -83,6 +83,7 @@ extension SearchAddressViewController: UITableViewDataSource {
         cell.adress = indexPath.section == tableView.numberOfSections - 1 ? addresses[indexPath.row] : history[indexPath.row]
         return cell
     }
+
 }
 
 extension SearchAddressViewController: UITableViewDelegate {

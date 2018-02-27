@@ -16,7 +16,7 @@ class AddressBLL {
         addressStorage = AddressHistoryStorage()
         addressService = AddressService()
     }
-    
+
     init(storage: AddressStorageProtocol, service: AddressServiceProtocol) {
         addressStorage = storage
         addressService = service
@@ -40,7 +40,7 @@ class AddressBLL {
         }
     }
     
-    func getAddressHistory(completion: ([Address]) -> Void){
+    func getAddressHistory(completion: ([Address]) -> Void) {
         addressStorage.getAddresses { (addresses) in
             completion(addresses)
         }

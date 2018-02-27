@@ -12,7 +12,7 @@ import CoreLocation
 class Coordinate: NSObject, NSCoding {
     let latitude: Double
     let longitude: Double
-    
+
     private struct SerializationKeys {
         static let latitude = "latitude"
         static let longitude = "longitude"
@@ -38,7 +38,7 @@ class Coordinate: NSObject, NSCoding {
         self.longitude = aDecoder.decodeDouble(forKey: SerializationKeys.longitude)
     }
     
-    static func ==(lhs: Coordinate, rhs: Coordinate) -> Bool{
+    static func ==(lhs: Coordinate, rhs: Coordinate) -> Bool {
         return lhs.latitude == rhs.latitude
             && lhs.longitude == rhs.longitude
     }

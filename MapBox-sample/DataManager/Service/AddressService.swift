@@ -24,7 +24,7 @@ final class AddressService: AddressServiceProtocol {
             completion(foundAddresses.map {Address(mapBoxDic: $0.addressDictionary as! [String: Any], coordinate: $0.location!, printableAddress: $0.qualifiedName!)})
         }
     }
-    
+
     func getAddress(coordinate:CLLocationCoordinate2D, completion:@escaping (Address?) -> Void) {
         let options = ReverseGeocodeOptions(coordinate: coordinate)
         
