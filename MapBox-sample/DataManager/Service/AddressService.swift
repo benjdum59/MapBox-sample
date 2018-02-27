@@ -27,7 +27,7 @@ final class AddressService: AddressServiceProtocol {
 
     func getAddress(coordinate:CLLocationCoordinate2D, completion:@escaping (Address?) -> Void) {
         let options = ReverseGeocodeOptions(coordinate: coordinate)
-        
+
         geocoder.geocode(options) { (placemarks, attribution, error) in
             guard let placemark = placemarks?.first else {
                 completion(nil)

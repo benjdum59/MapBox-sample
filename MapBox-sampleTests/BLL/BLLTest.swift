@@ -81,6 +81,19 @@ class BLLTests: XCTestCase {
         XCTAssertTrue(service.getAddressCalled, "Method getAddress should be called")
         XCTAssertTrue(storage.saveAddressesCalled, "Method saveAddresses should be called")
     }
+    
+    func testGetAddressInvalid(){
+        let readyExpectation = self.expectation(description: "testGetAddress")
+        addressBLL = AddressBLL()
+        let fakeLocation = CLLocationCoordinate2D(latitude: -1000, longitude: -1000)
+        addressBLL.getAddress(coordinate: fakeLocation) { (address) in
+            XCTAssertNil(address, "Address should be nil since we have non existent location")
+             readyExpectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 30) { (error) in
+            XCTAssertNil(error, "Error")
+        }
+    }
 
     
     func testPerformanceExample() {

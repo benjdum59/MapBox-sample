@@ -46,7 +46,7 @@ class SearchAddressViewController: UIViewController {
         super.viewDidAppear(animated)
         addressSearchBar.becomeFirstResponder()
     }
-    
+
     private func getAddresses() {
         dataManager.addressBLL.searchAddress(string: self.addressSearchBar.text ?? "") { (addresses) in
             self.addresses = addresses

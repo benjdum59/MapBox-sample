@@ -25,7 +25,7 @@ class Address: NSObject, NSCoding {
         static let printableAddress = "printableAddress"
         static let coordinate = "coordinate"
     }
-    
+
     init(streetNumber: String?, streetName: String?, postalCode: String?, town: String?, printableAddress: String?, coordinate: Coordinate) {
         self.streetName = streetName
         self.streetNumber = streetNumber
@@ -97,7 +97,7 @@ extension Address {
 
 extension Array where Element : Address {
 
-    @discardableResult mutating func add(address: Address, maxElements: Int) -> [Address] {
+    @discardableResult mutating func add(address: Address, maxElements: Int = Constants.Persistence.maxAddressCount) -> [Address] {
         var filteredAddresses: [Address] = self.filter({$0.coordinate.latitude != address.coordinate.latitude || $0.coordinate.longitude != address.coordinate.longitude})
         if filteredAddresses.count < maxElements {
             filteredAddresses.append(address)

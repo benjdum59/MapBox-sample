@@ -37,4 +37,8 @@ struct Constants {
         static let ok = "ok".localized
         static let alertSettings = "alert_settings".localized
     }
+    struct Persistence {
+        private init() {}
+        static let maxAddressCount = 2
+    }
 }

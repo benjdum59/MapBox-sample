@@ -17,7 +17,7 @@ class Coordinate: NSObject, NSCoding {
         static let latitude = "latitude"
         static let longitude = "longitude"
     }
-    
+
     init(latitude: Double, longitude: Double) {
         self.latitude = latitude
         self.longitude = longitude
